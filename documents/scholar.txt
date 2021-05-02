@@ -1,0 +1,6 @@
+@inproceedings{graves2008unconstrained,
+  title={Unconstrained online handwriting recognition with recurrent neural networks},
+  author={Graves, Alex and Fern{\'a}ndez, Santiago and Liwicki, Marcus and Bunke, Horst and Schmidhuber, J{\"u}rgen},
+  booktitle={Advances in Neural Information Processing Systems 20, NIPS 2008},
+  year={2008}
+}
