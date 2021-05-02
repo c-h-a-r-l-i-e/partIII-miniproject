@@ -1,6 +1,10 @@
-@inproceedings{graves2008unconstrained,
-  title={Unconstrained online handwriting recognition with recurrent neural networks},
-  author={Graves, Alex and Fern{\'a}ndez, Santiago and Liwicki, Marcus and Bunke, Horst and Schmidhuber, J{\"u}rgen},
-  booktitle={Advances in Neural Information Processing Systems 20, NIPS 2008},
-  year={2008}
+@article{hochreiter1997long,
+  title={Long short-term memory},
+  author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
+  journal={Neural computation},
+  volume={9},
+  number={8},
+  pages={1735--1780},
+  year={1997},
+  publisher={MIT Press}
 }
