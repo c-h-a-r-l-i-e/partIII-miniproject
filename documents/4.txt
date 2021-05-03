@@ -1,0 +1,7 @@
+@inproceedings{liu2014facial,
+  title={Facial expression recognition via a boosted deep belief network},
+  author={Liu, Ping and Han, Shizhong and Meng, Zibo and Tong, Yan},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={1805--1812},
+  year={2014}
+}

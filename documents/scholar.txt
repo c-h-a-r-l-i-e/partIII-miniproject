@@ -1,10 +1,10 @@
-@article{hochreiter1997long,
-  title={Long short-term memory},
-  author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
-  journal={Neural computation},
-  volume={9},
-  number={8},
-  pages={1735--1780},
-  year={1997},
-  publisher={MIT Press}
+@article{friesen1978facial,
+  title={Facial action coding system: a technique for the measurement of facial movement},
+  author={Friesen, E and Ekman, Paul},
+  journal={Palo Alto},
+  volume={3},
+  number={2},
+  pages={5},
+  year={1978},
+  publisher={Consulting Psychologists Press}
 }

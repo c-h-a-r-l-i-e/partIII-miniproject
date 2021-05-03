@@ -1,0 +1,10 @@
+@article{chen2018deep,
+  title={Deep peak-neutral difference feature for facial expression recognition},
+  author={Chen, Jingying and Xu, Ruyi and Liu, Leyuan},
+  journal={Multimedia Tools and Applications},
+  volume={77},
+  number={22},
+  pages={29871--29887},
+  year={2018},
+  publisher={Springer}
+}

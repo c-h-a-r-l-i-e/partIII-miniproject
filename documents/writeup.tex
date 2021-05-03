@@ -86,7 +86,7 @@
 \begin{document}
 
 %%
-\title{Affect Analysis for Cloud Robotics}
+\title{Facial Expression Recognition for Cloud Robotics}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -97,8 +97,8 @@
 \author{Charlie Maclean}
 \affiliation{%
   \institution{University of Cambridge}
-  \country{United Kingdom}
   \city{Cambridge}
+  \country{United Kingdom}
 }
 \email{cm927@cam.ac.uk}
 
@@ -201,6 +201,104 @@ concludes the paper with an overview of the findings.
 
 \section{Related Work}
 
+In this section I give an overview of facial expression recognition
+techniques, first for images, and then for videos, followed by a section 
+on classifying data at reduced resolutions. 
+
+\subsection{Facial Expression Recognition in Images}
+
+Facial expressions have allowed humans to communicate their emotions amongst
+each other for years. There has been a large volume of research into the
+mechanisms which allow this non-verbal communication to happen. An early work
+by P. Ekman and W.V. Friesen introduced the Facial Action Coding System
+(FACS) \cite{friesen1978facial}, which described a list of facial action units
+- regions which change as a person changes their expression. The work further describes
+how a given facial expression could be described as a combination of action
+units. Following this work, P. Ekman et al. detailed how a mapping can be made
+between the facial action units and a person's emotions \cite{ekman1997face}. 
+I will now detail the work that has been put into using machines to detect
+emotions from photos, splitting the research into those that make use of deep
+networks, and those before deep networks became widespread. 
+
+Before the use of deep networks, there were two main approaches to sentiment
+classification for images - rule-based methods, and appearance based methods.
+First, the rule-based methods were centred around detecting facial action
+units individually, and then piecing together the results from the facial
+action unit recognizers to derive an overall emotion, for example in Y. Tian
+et al.'s work \cite{tian2001recognizing}. These techniques
+suffered as recognizing an individual action unit is not an easy task. In the
+alternative approach, appearance based methods, some features are extracted
+from the overall face, and then those features are passed through a machine
+learning classifier. For example, M.S. Bartlett et al. found that they could
+achieve good results by extracting features using Gabor filters, followed by a
+Support Vector Machine (SVM) \cite{bartlett2005recognizing}. Additionally, J.
+Whitehall and C. Omlin showed that comparable results could be obtained in
+significantly quicker time by instead using Haar wavelets to obtain features
+before passing through a SVM \cite{whitehill2006haar}. 
+
+In previous techniques, processing of emotions had been split into learning
+features, selecting features and then using a classifier to learn the
+patterns. The downside of taking that approach is that the first layers do not
+get feedback from the latter layers. Deep learning aims to solve that, by
+integrating the feature finding, selection and classification into one deep
+network that can be trained at once. One of the early papers making use of
+this technique was by P. Liu et al. \cite{liu2014facial}, who suggested using
+a Boosted Deep Belief Network. This network consisted of several deep networks
+learning features, and some of these networks get boosted based on their
+performance. Finally, in \cite{liu2016facial}, Liu et al. introduced CNNs to the 
+problem, with their CNN Ensemble network. The network consisted of three 
+different convolutional networks, which proved to achieve better results than
+a single CNN.
+
+\subsection{Facial Expression Recognition in Videos}
+
+When classifying emotion in videos, there is additional information that can
+be extracted by accounting for the way the face changes over time. There are
+several papers which attempt to do this, which I will now go over, beginning
+with aggregation techniques. Aggregation techniques classify each frame within
+a video, and then combine the results with some sort of aggregator. In
+\cite{kahou2016emonets} and \cite{kahou2013combining}, S. Kahou et al. split
+the video into 10 sections, and within each section aggregate the frame
+predictions with an average. They go on to use a SVM to classify using all 10
+aggregate predictions. An alternative method was introduced in 
+\cite{liu2014combining} where
+M. Liu et al. showed that features from individual frames could be mapped to 
+linear subspaces, covariance matrices or Gaussian distributions, allowing
+these to be passed to a support vector machine.
+
+An alternative approach focussed on attempts to classify the level of
+emotional intensity present in an individual frame - the idea being that you
+could derive the emotion of a video base on the strongest emotions present. 
+In \cite{zhao2016peak} X. Zhao et al. propose a network which minimizes the differences
+between an emotion at low intensity and the same emotion at high intensity, as
+a way to get better classification of low intensity emotion. The downside of
+their technique was that it required a training set consisting of pairs of the
+same emotions at different intensities. To address this, 
+in \cite{chen2018deep} J. Chen et al. used unsupervised clustering and a semisupervised 
+SVM to detect peak and neutral frames in a large dataset.
+
+Finally, deep spatio-temporal networks were introduced which use sequences of
+frames as inputs to the networks, in the hopes that we can learn more
+information from the temporal dynamics of the images. C3Ds
+\cite{tran2015learning} are the natural generalization of a CNN to 3
+dimensions - instead of convolving an image with a 2D kernel, we convolve a
+sequence of frames with a 3D kernel. These 3D techniques have been bought to
+video emotion recognition, for example by X. Ouyang in \cite{ouyang2017audio}.
+An alternative approach was taken in \cite{kim2017multi} where D. Kim et al.
+tracked facial landmarks to generate trajectories which were used as features.
+Finally, a common approach is to use a CNN to learn spatial features of an
+image followed by a LSTM to learn the temporal features of the overall video, as in
+\cite{kim2017multiobjective}.
+
+\subsection{Reduced resolution classification}
+
+There have been a couple of studies looking at how to cope when the face that
+needs to be classified is at a low resolution. Firstly, Y. Tian
+\cite{tian2004evaluation} looked at how low spatial resolution would affect
+three steps in a facial expression analysis pipeline: face acquisition,
+facial data extraction and finally expression recognition. 
+
+
 \section{Facial Expression Recognition}
 \subsection{Images}
 
@@ -213,17 +311,14 @@ concludes the paper with an overview of the findings.
 In order to efficiently train on 
 
 \section{Future Work}
+%%
+%% Future work:
+%% - Multimodal analysis
+%% - Testing on in the wild datasets
+%% - 
+
 \section{Conclusion}
 
-
-%%
-%% The acknowledgments section is defined using the "acks" environment
-%% (and NOT an unnumbered section). This ensures the proper
-%% identification of the section in the article metadata, and the
-%% consistent spelling of the heading.
-\begin{acks}
-To Robert, for the bagels and explaining CMYK and color spaces.
-\end{acks}
 
 %%
 %% The next two lines define the bibliography style to be used, and

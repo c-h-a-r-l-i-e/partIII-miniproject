@@ -1,0 +1,7 @@
+@inproceedings{liu2014combining,
+  title={Combining multiple kernel methods on riemannian manifold for emotion recognition in the wild},
+  author={Liu, Mengyi and Wang, Ruiping and Li, Shaoxin and Shan, Shiguang and Huang, Zhiwu and Chen, Xilin},
+  booktitle={Proceedings of the 16th International Conference on multimodal interaction},
+  pages={494--501},
+  year={2014}
+}

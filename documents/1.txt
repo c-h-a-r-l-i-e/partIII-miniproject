@@ -1,0 +1,9 @@
+@inproceedings{bartlett2005recognizing,
+  title={Recognizing facial expression: machine learning and application to spontaneous behavior},
+  author={Bartlett, Marian Stewart and Littlewort, Gwen and Frank, Mark and Lainscsek, Claudia and Fasel, Ian and Movellan, Javier},
+  booktitle={2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)},
+  volume={2},
+  pages={568--573},
+  year={2005},
+  organization={IEEE}
+}

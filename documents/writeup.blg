@@ -6,88 +6,82 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: writeup.bib
-Warning--I didn't find a database entry for "Lamport:LaTeX"
-Warning--I didn't find a database entry for "Abril07"
-Warning--I didn't find a database entry for "Cohen07"
-Warning--I didn't find a database entry for "JCohen96"
-Warning--I didn't find a database entry for "Kosiur01"
-Warning--I didn't find a database entry for "Harel79"
-Warning--I didn't find a database entry for "Editor00"
-Warning--I didn't find a database entry for "Editor00a"
-Warning--I didn't find a database entry for "Spector90"
-Warning--I didn't find a database entry for "Douglass98"
-Warning--I didn't find a database entry for "Knuth97"
-Warning--I didn't find a database entry for "Andler79"
-Warning--I didn't find a database entry for "Hagerup1993"
-Warning--I didn't find a database entry for "Smith10"
-Warning--I didn't find a database entry for "VanGundy07"
-Warning--I didn't find a database entry for "Harel78"
-Warning--I didn't find a database entry for "Bornmann2019"
-Warning--I didn't find a database entry for "AnzarootPBM14"
-Warning--I didn't find a database entry for "Clarkson85"
-Warning--I didn't find a database entry for "anisi03"
-Warning--I didn't find a database entry for "Thornburg01"
-Warning--I didn't find a database entry for "Ablamowicz07"
-Warning--I didn't find a database entry for "Poker06"
-Warning--I didn't find a database entry for "Obama08"
-Warning--I didn't find a database entry for "Novak03"
-Warning--I didn't find a database entry for "Lee05"
-Warning--I didn't find a database entry for "JoeScientist001"
-Warning--I didn't find a database entry for "rous08"
-Warning--I didn't find a database entry for "SaeediMEJ10"
-Warning--I didn't find a database entry for "SaeediJETC10"
-Warning--I didn't find a database entry for "Kirschmer:2010:AEI:1958016.1958018"
-Warning--I didn't find a database entry for "MR781536"
-Warning--I didn't find a database entry for "MR781537"
-Warning--I didn't find a database entry for "2004:ITE:1009386.1010128"
-Warning--I didn't find a database entry for "TUGInstmem"
-Warning--I didn't find a database entry for "CTANacmart"
-Warning--I didn't find a database entry for "R"
-Warning--I didn't find a database entry for "UMassCitations"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 0 entries,
+Warning--empty publisher in bartlett2005recognizing
+Warning--empty address in bartlett2005recognizing
+Warning--empty address in celiktutan18
+Warning--empty address in ekman1997face
+Warning--empty publisher in graves2008unconstrained
+Warning--empty address in graves2008unconstrained
+Warning--page numbers missing in both pages and numpages fields in graves2008unconstrained
+Warning--can't use both volume and number fields in graves2005framewise
+Warning--empty address in graves2005framewise
+Warning--empty address in he2016deep
+Warning--empty publisher in kahou2013combining
+Warning--empty address in kahou2013combining
+Warning--empty publisher in kim2017multi
+Warning--empty address in kim2017multi
+Warning--empty publisher in liu2016facial
+Warning--empty address in liu2016facial
+Warning--empty publisher in liu2014combining
+Warning--empty address in liu2014combining
+Warning--empty publisher in liu2014facial
+Warning--empty address in liu2014facial
+Warning--empty publisher in ouyang2017audio
+Warning--empty address in ouyang2017audio
+Warning--no number and no volume in islam2020foreign
+Warning--empty address in simonyan2014very
+Warning--page numbers missing in both pages and numpages fields in simonyan2014very
+Warning--page numbers missing in both pages and numpages fields in szegedy2014going
+Warning--empty publisher in tran2015learning
+Warning--empty address in tran2015learning
+Warning--empty publisher in whitehill2006haar
+Warning--empty address in whitehill2006haar
+Warning--empty publisher in zhao2016peak
+Warning--empty address in zhao2016peak
+You've used 29 entries,
             5959 wiz_defined-function locations,
-            1401 strings with 15390 characters,
-and the built_in function-call counts, 105 in all, are:
-= -- 0
-> -- 0
+            1517 strings with 21895 characters,
+and the built_in function-call counts, 37674 in all, are:
+= -- 4385
+> -- 1734
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 14
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 1
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
-int.to.chr$ -- 2
++ -- 582
+- -- 588
+* -- 2922
+:= -- 4027
+add.period$ -- 147
+call.type$ -- 29
+change.case$ -- 251
+chr.to.int$ -- 28
+cite$ -- 61
+duplicate$ -- 3156
+empty$ -- 2205
+format.name$ -- 691
+if$ -- 8842
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 40
-num.names$ -- 0
-pop$ -- 1
+missing$ -- 109
+newline$ -- 297
+num.names$ -- 231
+pop$ -- 1254
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 507
 quote$ -- 0
-skip$ -- 1
+skip$ -- 1145
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 2615
+swap$ -- 335
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 723
+warning$ -- 32
+while$ -- 211
 width$ -- 0
-write$ -- 39
-(There were 38 warnings)
+write$ -- 562
+(There were 32 warnings)

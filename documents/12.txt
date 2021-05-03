@@ -1,0 +1,7 @@
+@inproceedings{ouyang2017audio,
+  title={Audio-visual emotion recognition using deep transfer learning and multiple temporal models},
+  author={Ouyang, Xi and Kawaai, Shigenori and Goh, Ester Gue Hua and Shen, Shengmei and Ding, Wan and Ming, Huaiping and Huang, Dong-Yan},
+  booktitle={Proceedings of the 19th ACM international conference on multimodal interaction},
+  pages={577--582},
+  year={2017}
+}

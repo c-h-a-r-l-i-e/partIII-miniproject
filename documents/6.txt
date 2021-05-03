@@ -1,0 +1,7 @@
+@inproceedings{kahou2013combining,
+  title={Combining modality specific deep neural networks for emotion recognition in video},
+  author={Kahou, Samira Ebrahimi and Pal, Christopher and Bouthillier, Xavier and Froumenty, Pierre and G{\"u}l{\c{c}}ehre, {\c{C}}aglar and Memisevic, Roland and Vincent, Pascal and Courville, Aaron and Bengio, Yoshua and Ferrari, Raul Chandias and others},
+  booktitle={Proceedings of the 15th ACM on International conference on multimodal interaction},
+  pages={543--550},
+  year={2013}
+}
