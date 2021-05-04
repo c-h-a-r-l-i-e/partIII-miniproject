@@ -1,0 +1,9 @@
+@article{vo2020pyramid,
+  title={Pyramid with Super Resolution for In-the-Wild Facial Expression Recognition},
+  author={Vo, Thanh-Hung and Lee, Guee-Sang and Yang, Hyung-Jeong and Kim, Soo-Hyung},
+  journal={IEEE Access},
+  volume={8},
+  pages={131988--132001},
+  year={2020},
+  publisher={IEEE}
+}

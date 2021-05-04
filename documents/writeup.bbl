@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{29}
+\begin{thebibliography}{35}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -36,6 +36,19 @@
 \providecommand\bibinfo[2]{#2}
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Barsoum, Zhang, Ferrer, and Zhang}{Barsoum
+  et~al\mbox{.}}{2016}]%
+        {barsoum2016training}
+\bibfield{author}{\bibinfo{person}{Emad Barsoum}, \bibinfo{person}{Cha Zhang},
+  \bibinfo{person}{Cristian~Canton Ferrer}, {and} \bibinfo{person}{Zhengyou
+  Zhang}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Training deep networks for facial expression
+  recognition with crowd-sourced label distribution}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 18th ACM International
+  Conference on Multimodal Interaction}}. \bibinfo{pages}{279--283}.
+\newblock
+
 
 \bibitem[\protect\citeauthoryear{Bartlett, Littlewort, Frank, Lainscsek, Fasel,
   and Movellan}{Bartlett et~al\mbox{.}}{2005}]%
@@ -130,6 +143,23 @@
   measurement of facial movement}}.
 \newblock \bibinfo{journal}{\emph{Palo Alto}} \bibinfo{volume}{3},
   \bibinfo{number}{2} (\bibinfo{year}{1978}), \bibinfo{pages}{5}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Goodfellow, Erhan, Carrier, Courville, Mirza,
+  Hamner, Cukierski, Tang, Thaler, Lee, and Others}{Goodfellow
+  et~al\mbox{.}}{2013}]%
+        {goodfellow2013challenges}
+\bibfield{author}{\bibinfo{person}{Ian~J Goodfellow}, \bibinfo{person}{Dumitru
+  Erhan}, \bibinfo{person}{Pierre~Luc Carrier}, \bibinfo{person}{Aaron
+  Courville}, \bibinfo{person}{Mehdi Mirza}, \bibinfo{person}{Ben Hamner},
+  \bibinfo{person}{Will Cukierski}, \bibinfo{person}{Yichuan Tang},
+  \bibinfo{person}{David Thaler}, \bibinfo{person}{Dong-Hyun Lee}, {and}
+  \bibinfo{person}{Others}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{Challenges in representation learning: A report on
+  three machine learning contests}}. In \bibinfo{booktitle}{\emph{International
+  conference on neural information processing}}. Springer,
+  \bibinfo{pages}{117--124}.
 \newblock
 
 
@@ -230,12 +260,27 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Kim, Baddar, Jang, and Ro}{Kim
+  et~al\mbox{.}}{2017a}]%
+        {kim2017multiobjective}
+\bibfield{author}{\bibinfo{person}{Dae~Hoe Kim}, \bibinfo{person}{Wissam~J
+  Baddar}, \bibinfo{person}{Jinhyeok Jang}, {and} \bibinfo{person}{Yong~Man
+  Ro}.} \bibinfo{year}{2017}\natexlab{a}.
+\newblock \showarticletitle{{Multi-objective based spatio-temporal feature
+  representation learning robust to expression intensity variations for facial
+  expression recognition}}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Affective Computing}}
+  \bibinfo{volume}{10}, \bibinfo{number}{2} (\bibinfo{year}{2017}),
+  \bibinfo{pages}{223--236}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Kim, Lee, Choi, and Song}{Kim
-  et~al\mbox{.}}{2017}]%
+  et~al\mbox{.}}{2017b}]%
         {kim2017multi}
 \bibfield{author}{\bibinfo{person}{Dae~Ha Kim}, \bibinfo{person}{Min~Kyu Lee},
   \bibinfo{person}{Dong~Yoon Choi}, {and} \bibinfo{person}{Byung~Cheol Song}.}
-  \bibinfo{year}{2017}\natexlab{}.
+  \bibinfo{year}{2017}\natexlab{b}.
 \newblock \showarticletitle{{Multi-modal emotion recognition using
   semi-supervised learning and multiple neural networks in the wild}}. In
   \bibinfo{booktitle}{\emph{Proceedings of the 19th ACM International
@@ -292,6 +337,19 @@
   belief network}}. In \bibinfo{booktitle}{\emph{Proceedings of the IEEE
   conference on computer vision and pattern recognition}}.
   \bibinfo{pages}{1805--1812}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Livingstone and Russo}{Livingstone and
+  Russo}{2018}]%
+        {livingstone2018ryerson}
+\bibfield{author}{\bibinfo{person}{Steven~R Livingstone} {and}
+  \bibinfo{person}{Frank~A Russo}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{The Ryerson Audio-Visual Database of Emotional
+  Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal
+  expressions in North American English}}.
+\newblock \bibinfo{journal}{\emph{PloS one}} \bibinfo{volume}{13},
+  \bibinfo{number}{5} (\bibinfo{year}{2018}), \bibinfo{pages}{e0196391}.
 \newblock
 
 
@@ -422,6 +480,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Tian}{Tian}{2004}]%
+        {tian2004evaluation}
+\bibfield{author}{\bibinfo{person}{Ying-li Tian}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{{Evaluation of face resolution for expression
+  analysis}}. In \bibinfo{booktitle}{\emph{2004 Conference on Computer Vision
+  and Pattern Recognition Workshop}}. IEEE, \bibinfo{pages}{82}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Tran, Bourdev, Fergus, Torresani, and
   Paluri}{Tran et~al\mbox{.}}{2015}]%
         {tran2015learning}
@@ -456,6 +524,18 @@
 \newblock \showarticletitle{{Peak-piloted deep network for facial expression
   recognition}}. In \bibinfo{booktitle}{\emph{European conference on computer
   vision}}. Springer, \bibinfo{pages}{425--442}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zheng, Ramirez, and Fuentes}{Zheng
+  et~al\mbox{.}}{2010}]%
+        {zheng2010face}
+\bibfield{author}{\bibinfo{person}{Jun Zheng}, \bibinfo{person}{Geovany~A
+  Ramirez}, {and} \bibinfo{person}{Olac Fuentes}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{{Face detection in low-resolution color images}}.
+  In \bibinfo{booktitle}{\emph{International Conference Image Analysis and
+  Recognition}}. Springer, \bibinfo{pages}{454--463}.
 \newblock
 
 

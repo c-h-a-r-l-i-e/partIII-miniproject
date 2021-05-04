@@ -6,15 +6,21 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: writeup.bib
+Warning--I didn't find a database entry for "khan2013framework"
+Warning--I didn't find a database entry for "vo2020pyramid"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in barsoum2016training
+Warning--empty address in barsoum2016training
 Warning--empty publisher in bartlett2005recognizing
 Warning--empty address in bartlett2005recognizing
 Warning--empty address in celiktutan18
 Warning--empty address in ekman1997face
+Warning--empty publisher in goodfellow2013challenges
+Warning--empty address in goodfellow2013challenges
 Warning--empty publisher in graves2008unconstrained
 Warning--empty address in graves2008unconstrained
 Warning--page numbers missing in both pages and numpages fields in graves2008unconstrained
@@ -37,51 +43,55 @@ Warning--no number and no volume in islam2020foreign
 Warning--empty address in simonyan2014very
 Warning--page numbers missing in both pages and numpages fields in simonyan2014very
 Warning--page numbers missing in both pages and numpages fields in szegedy2014going
+Warning--empty publisher in tian2004evaluation
+Warning--empty address in tian2004evaluation
 Warning--empty publisher in tran2015learning
 Warning--empty address in tran2015learning
 Warning--empty publisher in whitehill2006haar
 Warning--empty address in whitehill2006haar
 Warning--empty publisher in zhao2016peak
 Warning--empty address in zhao2016peak
-You've used 29 entries,
+Warning--empty publisher in zheng2010face
+Warning--empty address in zheng2010face
+You've used 35 entries,
             5959 wiz_defined-function locations,
-            1517 strings with 21895 characters,
-and the built_in function-call counts, 37674 in all, are:
-= -- 4385
-> -- 1734
+            1553 strings with 23483 characters,
+and the built_in function-call counts, 45648 in all, are:
+= -- 5325
+> -- 2065
 < -- 0
-+ -- 582
-- -- 588
-* -- 2922
-:= -- 4027
-add.period$ -- 147
-call.type$ -- 29
-change.case$ -- 251
-chr.to.int$ -- 28
-cite$ -- 61
-duplicate$ -- 3156
-empty$ -- 2205
-format.name$ -- 691
-if$ -- 8842
-int.to.chr$ -- 3
++ -- 693
+- -- 700
+* -- 3500
+:= -- 4841
+add.period$ -- 177
+call.type$ -- 35
+change.case$ -- 300
+chr.to.int$ -- 33
+cite$ -- 75
+duplicate$ -- 3867
+empty$ -- 2693
+format.name$ -- 822
+if$ -- 10772
+int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 109
-newline$ -- 297
-num.names$ -- 231
-pop$ -- 1254
+missing$ -- 137
+newline$ -- 341
+num.names$ -- 278
+pop$ -- 1545
 preamble$ -- 1
-purify$ -- 507
+purify$ -- 608
 quote$ -- 0
-skip$ -- 1145
+skip$ -- 1408
 stack$ -- 0
-substring$ -- 2615
-swap$ -- 335
+substring$ -- 3177
+swap$ -- 421
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 723
-warning$ -- 32
-while$ -- 211
+type$ -- 869
+warning$ -- 40
+while$ -- 257
 width$ -- 0
-write$ -- 562
-(There were 32 warnings)
+write$ -- 663
+(There were 42 warnings)

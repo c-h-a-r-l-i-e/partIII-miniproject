@@ -1,10 +1,8 @@
-@article{friesen1978facial,
-  title={Facial action coding system: a technique for the measurement of facial movement},
-  author={Friesen, E and Ekman, Paul},
-  journal={Palo Alto},
-  volume={3},
-  number={2},
-  pages={5},
-  year={1978},
-  publisher={Consulting Psychologists Press}
+@inproceedings{zheng2010face,
+  title={Face detection in low-resolution color images},
+  author={Zheng, Jun and Ramirez, Geovany A and Fuentes, Olac},
+  booktitle={International Conference Image Analysis and Recognition},
+  pages={454--463},
+  year={2010},
+  organization={Springer}
 }

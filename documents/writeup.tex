@@ -296,19 +296,58 @@ There have been a couple of studies looking at how to cope when the face that
 needs to be classified is at a low resolution. Firstly, Y. Tian
 \cite{tian2004evaluation} looked at how low spatial resolution would affect
 three steps in a facial expression analysis pipeline: face acquisition,
-facial data extraction and finally expression recognition. 
-
-
-\section{Facial Expression Recognition}
-\subsection{Images}
+facial data extraction and finally expression recognition. Also, R. Khan et
+al. produced a framework for expression recognition on low-resolution images
+\cite{khan2013framework}, by suggesting a new set of features which work on
+low resolution images - called pyramid of local binary pattern. Finally, T.
+Vo et al. proposed the pyramid with super resolution architecture
+\cite{vo2020pyramid}, which made use of super resolution networks in order to
+scale up low resolution images with minimal artefacts. 
 
 
 
 \section{Methodology}
+In this section, the goal is to build to a classifier which we can use to test
+video at multiple spatial and temporal resolutions. We first introduce the
+datasets used in the work, then discuss the image classifiers produced, before
+finally talking about the techniques used to classify the videos.
 
-\subsection{Transfer Learning}
+\subsection{Datasets}
 
-In order to efficiently train on 
+For learning facial expressions of images I used the FER+ dataset
+\cite{barsoum2016training} from E. Barsoum et al., a large collection of
+images first as part of the FER-2013 dataset \cite{goodfellow2013challenges}.
+The FER-2013 dataset consists of 36,685 48x48 greyscale images obtained
+by searching for different emotions on Google Images. The dataset is split
+into 7 categories - angry, sad, disgust, fear, happy, surprise and neutral.
+FER+ uses the same collection of images as in FER-2013, but updated the labels
+to be more accurate by crowd-sourcing the labelling and getting 10 taggers to
+label each image. In this work, we use majority voting to decide the ground
+truth of the images, discarding those for which there is no majority. 
+
+To learn facial expressions in videos, I used the RAVDESS
+\cite{livingstone2018ryerson} dataset by SR. Livingstone and FA. Russo. The
+dataset consists of 24 professional actors speaking two different statements
+while expressing one of eight emotions. The emotions include calm, happy, sad,
+angry, fearful, surprise, disgust and neutral. The data is provided at 720p,
+30 fps with a blank background, in laboratory settings.
+
+To pre-process the video data, we crop the images to a box around the face. In
+order to detect the bounding box around the face, we make use of Haar
+cascades. The purpose of this study is not to focus on how to detect faces at
+a reduced resolution as there is sufficient work already on that topic, for
+example \cite{zheng2010face} and \cite{tian2004evaluation}.
+
+
+
+
+\subsection{Training Image Recognition}
+
+
+\subsection{Training Video Recognition}
+
+
+\section{Evaluation}
 
 \section{Future Work}
 %%
