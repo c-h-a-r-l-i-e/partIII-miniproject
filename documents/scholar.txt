@@ -1,8 +1,6 @@
-@inproceedings{zheng2010face,
-  title={Face detection in low-resolution color images},
-  author={Zheng, Jun and Ramirez, Geovany A and Fuentes, Olac},
-  booktitle={International Conference Image Analysis and Recognition},
-  pages={454--463},
-  year={2010},
-  organization={Springer}
+@article{parkhi2015deep,
+  title={Deep face recognition},
+  author={Parkhi, Omkar M and Vedaldi, Andrea and Zisserman, Andrew},
+  year={2015},
+  publisher={British Machine Vision Association}
 }

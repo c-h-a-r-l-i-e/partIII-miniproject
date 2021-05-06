@@ -343,6 +343,35 @@ example \cite{zheng2010face} and \cite{tian2004evaluation}.
 
 \subsection{Training Image Recognition}
 
+I tried two different CNN architectures, ResNet18 and ResNet50. They are 18
+and 50 layer versions of the same family of Residual Networks, designed by K.
+He et al. \cite{DBLP:journals/corr/HeZRS15}. They were designed to tackle
+image recognition tasks, and were significantly deeper than previously
+introduced architectures, which allowed them to gain accuracy in several
+recognition tasks. 
+Further, despite the increase in depth, they managed to make
+the networks relatively easy to optimize.
+
+Instead of training the network beginning with random parameters, I made use
+of transfer learning - where you use network weights obtained from a different
+task. This helps to bootstrap the network, giving it a good place to start
+learning the task you want. In our case we keep the base of the network the
+same and freeze it throughout training, so those weights remain unchanged. 
+We use two different base models, which are publicly available - the first is
+trained on ImageNet \cite{ILSVRC15}, a massive dataset of over a million
+images, sorted into various nouns. Also, we use weights trained on the VGG
+Face dataset \cite{parkhi2015deep}, which consists of 9,131 images of
+different people's faces.
+Finally, we
+add two dense layers to the head of the network which we do train. 
+
+To train the network we use stochastic gradient descent, and in order to
+obtain good hyperparameters  we use Bayesian optimization TODO cite. Bayesian
+optimization represents the problem as a probabilistic model, which maps
+hyperparameters to the optimization criteria. By doing this, it can focus the
+hyperparameter search on those regions which are most likely to lead to good
+results.
+
 
 \subsection{Training Video Recognition}
 
