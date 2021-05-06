@@ -1,6 +1,6 @@
-@article{parkhi2015deep,
-  title={Deep face recognition},
-  author={Parkhi, Omkar M and Vedaldi, Andrea and Zisserman, Andrew},
-  year={2015},
-  publisher={British Machine Vision Association}
+@article{snoek2012practical,
+  title={Practical bayesian optimization of machine learning algorithms},
+  author={Snoek, Jasper and Larochelle, Hugo and Adams, Ryan P},
+  journal={arXiv preprint arXiv:1206.2944},
+  year={2012}
 }

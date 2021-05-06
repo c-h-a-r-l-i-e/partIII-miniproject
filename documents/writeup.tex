@@ -335,8 +335,7 @@ angry, fearful, surprise, disgust and neutral. The data is provided at 720p,
 To pre-process the video data, we crop the images to a box around the face. In
 order to detect the bounding box around the face, we make use of Haar
 cascades. The purpose of this study is not to focus on how to detect faces at
-a reduced resolution as there is sufficient work already on that topic, for
-example \cite{zheng2010face} and \cite{tian2004evaluation}.
+a reduced resolution as there is sufficient work already on that topic \cite{zheng2010face}, \cite{tian2004evaluation}.
 
 
 
@@ -366,14 +365,43 @@ Finally, we
 add two dense layers to the head of the network which we do train. 
 
 To train the network we use stochastic gradient descent, and in order to
-obtain good hyperparameters  we use Bayesian optimization TODO cite. Bayesian
-optimization represents the problem as a probabilistic model, which maps
+obtain good hyperparameters  we use Bayesian optimization \cite{snoek2012practical}. Bayesian
+optimization represents the problem as a Guassian process, which maps
 hyperparameters to the optimization criteria. By doing this, it can focus the
 hyperparameter search on those regions which are most likely to lead to good
 results.
 
 
 \subsection{Training Video Recognition}
+
+To classify video, I decided to make use of the best network I previously used
+for classifying images with the logic that the patterns learnt there would be
+applicable in the video domain too. In order to extend the network that was
+designed for single images to video, with several frames, I made use of 3
+different techniques. The first two are quite simplistic - I classify each
+frame of the video before then taking some aggregate of those results. For the
+first technique, this aggregate is a mean of all the classification scores.
+The second technique is where I take the max class for each frame, and then
+take the mode of these classifications.
+
+The third technique I used was a LSTM network, appended to the output of the
+ResNet, to form a CNN-LSTM architecture. I used a LSTM with 1024 units, which
+means the LSTM outputs 1024 different features. I follwed the LSTM with two
+dense layers for the final classifcation. The model was trained using the Adam
+optimizer \cite{kingma2014adam}, which promises to be well suited for
+optimization problems with a large number of parameters and data. As input to
+the network, I use 30 frames sequences from the video, and if the video was
+shorter than 40 frames I repeat frames until we get 30. 
+
+To preprocess the video, I created copies of the video at 3 different
+resolution and 3 different frame rates, for a total of 9 different clips for
+each input. The resolutions and frame rates were chosen such that they give a
+wide range of what may be possible over the internet. For resolutions, we had
+720p (1280x720 px), 360p (480x360 px) and 144p (256x144 px), and for
+frame rates we had 30 fps, 15 fps and 5 fps. 720 fps at 30 fps is feasible
+with a fast internet connection, and low proximity to the server, and 144p at
+5 fps would happen with a poor internet connection and/or large distance from
+a server. 
 
 
 \section{Evaluation}
