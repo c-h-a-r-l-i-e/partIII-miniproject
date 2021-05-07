@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{35}
+\begin{thebibliography}{38}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -288,6 +288,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Kingma and Ba}{Kingma and Ba}{2014}]%
+        {kingma2014adam}
+\bibfield{author}{\bibinfo{person}{Diederik~P Kingma} {and}
+  \bibinfo{person}{Jimmy Ba}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{Adam: A method for stochastic optimization}}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1412.6980}}
+  (\bibinfo{year}{2014}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Lawrence, Giles, Tsoi, and Back}{Lawrence
   et~al\mbox{.}}{1997}]%
         {lawrence1997face}
@@ -382,6 +392,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Parkhi, Vedaldi, and Zisserman}{Parkhi
+  et~al\mbox{.}}{2015}]%
+        {parkhi2015deep}
+\bibfield{author}{\bibinfo{person}{Omkar~M Parkhi}, \bibinfo{person}{Andrea
+  Vedaldi}, {and} \bibinfo{person}{Andrew Zisserman}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{Deep face recognition}}.
+\newblock  (\bibinfo{year}{2015}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Rumelhart, Hinton, and Williams}{Rumelhart
   et~al\mbox{.}}{1985}]%
         {rumelhart1985learning}
@@ -450,6 +471,19 @@
 \url{http://www.robots.ox.ac.uk/}
 \showURL{%
 \tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Snoek, Larochelle, and Adams}{Snoek
+  et~al\mbox{.}}{2012}]%
+        {snoek2012practical}
+\bibfield{author}{\bibinfo{person}{Jasper Snoek}, \bibinfo{person}{Hugo
+  Larochelle}, {and} \bibinfo{person}{Ryan~P Adams}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{{Practical bayesian optimization of machine
+  learning algorithms}}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1206.2944}}
+  (\bibinfo{year}{2012}).
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Szegedy, Liu, Jia, Sermanet, Reed, Anguelov,
