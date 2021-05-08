@@ -23,6 +23,7 @@
 %%
 %% The first command in your LaTeX source must be the \documentclass command.
 \documentclass[sigconf]{acmart}
+\usepackage{multirow}
 %% NOTE that a single column version may be required for 
 %% submission and peer review. This can be done by changing
 %% the \doucmentclass[...]{acmart} in this template to 
@@ -404,6 +405,28 @@ with a fast internet connection, and low proximity to the server, and 144p at
 a server. 
 
 \section{Evaluation}
+
+\subsection{Image Recognition}
+
+\begin{table*}[]
+\caption{Classification results on the test set of the FER+ dataset.}
+\begin{tabular}{llllllllllllllll}
+\hline
+\multirow{2}{*}{model} & \multicolumn{2}{c}{anger} &
+\multicolumn{2}{c}{disgust} & \multicolumn{2}{c}{fear} &
+\multicolumn{2}{c}{happiness} & \multicolumn{2}{c}{neutral} &
+\multicolumn{2}{c}{sadness} & \multicolumn{2}{c}{surprise}  & Overall\\ \cline{2-16}
+                       & Recall        & F1        
+		       & Recall        & F1        & Recall        & F1
+		       &  Recall        & F1        &  Recall        & F1
+		       & Recall        & F1        & Recall        & F1    &
+		       Accuracy    \\ \hline
+ResNet50 on VGG        &               &           &  &  \\
+ResNet50 on ImageNet   &               &           &  &  \\
+\hline
+\end{tabular}
+\end{table*}
+
 
 \section{Future Work}
 %%
