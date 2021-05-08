@@ -1,0 +1,10 @@
+@article{tian2001recognizing,
+  title={Recognizing action units for facial expression analysis},
+  author={Tian, Y-I and Kanade, Takeo and Cohn, Jeffrey F},
+  journal={IEEE Transactions on pattern analysis and machine intelligence},
+  volume={23},
+  number={2},
+  pages={97--115},
+  year={2001},
+  publisher={IEEE}
+}

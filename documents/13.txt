@@ -1,0 +1,7 @@
+@inproceedings{kim2017multi,
+  title={Multi-modal emotion recognition using semi-supervised learning and multiple neural networks in the wild},
+  author={Kim, Dae Ha and Lee, Min Kyu and Choi, Dong Yoon and Song, Byung Cheol},
+  booktitle={Proceedings of the 19th ACM International Conference on Multimodal Interaction},
+  pages={529--535},
+  year={2017}
+}

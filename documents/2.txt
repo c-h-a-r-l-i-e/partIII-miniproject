@@ -1,0 +1,8 @@
+@inproceedings{whitehill2006haar,
+  title={Haar features for FACS AU recognition},
+  author={Whitehill, Jacob and Omlin, Christian W},
+  booktitle={7th international conference on automatic face and gesture recognition (FGR06)},
+  pages={5--pp},
+  year={2006},
+  organization={IEEE}
+}

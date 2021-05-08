@@ -1,0 +1,10 @@
+@article{kahou2016emonets,
+  title={Emonets: Multimodal deep learning approaches for emotion recognition in video},
+  author={Kahou, Samira Ebrahimi and Bouthillier, Xavier and Lamblin, Pascal and Gulcehre, Caglar and Michalski, Vincent and Konda, Kishore and Jean, S{\'e}bastien and Froumenty, Pierre and Dauphin, Yann and Boulanger-Lewandowski, Nicolas and others},
+  journal={Journal on Multimodal User Interfaces},
+  volume={10},
+  number={2},
+  pages={99--111},
+  year={2016},
+  publisher={Springer}
+}

@@ -1,0 +1,10 @@
+@article{khan2013framework,
+  title={Framework for reliable, real-time facial expression recognition for low resolution images},
+  author={Khan, Rizwan Ahmed and Meyer, Alexandre and Konik, Hubert and Bouakaz, Saida},
+  journal={Pattern Recognition Letters},
+  volume={34},
+  number={10},
+  pages={1159--1168},
+  year={2013},
+  publisher={Elsevier}
+}

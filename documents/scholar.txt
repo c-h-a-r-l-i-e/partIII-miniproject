@@ -1,0 +1,6 @@
+@article{snoek2012practical,
+  title={Practical bayesian optimization of machine learning algorithms},
+  author={Snoek, Jasper and Larochelle, Hugo and Adams, Ryan P},
+  journal={arXiv preprint arXiv:1206.2944},
+  year={2012}
+}

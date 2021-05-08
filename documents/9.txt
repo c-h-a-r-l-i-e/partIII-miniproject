@@ -1,0 +1,8 @@
+@inproceedings{zhao2016peak,
+  title={Peak-piloted deep network for facial expression recognition},
+  author={Zhao, Xiangyun and Liang, Xiaodan and Liu, Luoqi and Li, Teng and Han, Yugang and Vasconcelos, Nuno and Yan, Shuicheng},
+  booktitle={European conference on computer vision},
+  pages={425--442},
+  year={2016},
+  organization={Springer}
+}

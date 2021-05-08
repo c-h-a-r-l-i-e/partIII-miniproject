@@ -1,0 +1,8 @@
+@inproceedings{tian2004evaluation,
+  title={Evaluation of face resolution for expression analysis},
+  author={Tian, Ying-li},
+  booktitle={2004 Conference on Computer Vision and Pattern Recognition Workshop},
+  pages={82--82},
+  year={2004},
+  organization={IEEE}
+}

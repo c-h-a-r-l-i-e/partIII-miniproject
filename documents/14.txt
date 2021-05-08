@@ -1,0 +1,10 @@
+@article{kim2017multi,
+  title={Multi-objective based spatio-temporal feature representation learning robust to expression intensity variations for facial expression recognition},
+  author={Kim, Dae Hoe and Baddar, Wissam J and Jang, Jinhyeok and Ro, Yong Man},
+  journal={IEEE Transactions on Affective Computing},
+  volume={10},
+  number={2},
+  pages={223--236},
+  year={2017},
+  publisher={IEEE}
+}

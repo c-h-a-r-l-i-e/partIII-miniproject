@@ -1,0 +1,576 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{38}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Barsoum, Zhang, Ferrer, and Zhang}{Barsoum
+  et~al\mbox{.}}{2016}]%
+        {barsoum2016training}
+\bibfield{author}{\bibinfo{person}{Emad Barsoum}, \bibinfo{person}{Cha Zhang},
+  \bibinfo{person}{Cristian~Canton Ferrer}, {and} \bibinfo{person}{Zhengyou
+  Zhang}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Training deep networks for facial expression
+  recognition with crowd-sourced label distribution}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 18th ACM International
+  Conference on Multimodal Interaction}}. \bibinfo{pages}{279--283}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bartlett, Littlewort, Frank, Lainscsek, Fasel,
+  and Movellan}{Bartlett et~al\mbox{.}}{2005}]%
+        {bartlett2005recognizing}
+\bibfield{author}{\bibinfo{person}{Marian~Stewart Bartlett},
+  \bibinfo{person}{Gwen Littlewort}, \bibinfo{person}{Mark Frank},
+  \bibinfo{person}{Claudia Lainscsek}, \bibinfo{person}{Ian Fasel}, {and}
+  \bibinfo{person}{Javier Movellan}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{{Recognizing facial expression: machine learning
+  and application to spontaneous behavior}}. In \bibinfo{booktitle}{\emph{2005
+  IEEE Computer Society Conference on Computer Vision and Pattern Recognition
+  (CVPR'05)}}, Vol.~\bibinfo{volume}{2}. IEEE, \bibinfo{pages}{568--573}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Celiktutan, Sariyanidi, and Gunes}{Celiktutan
+  et~al\mbox{.}}{2018}]%
+        {celiktutan18}
+\bibfield{author}{\bibinfo{person}{Oya Celiktutan}, \bibinfo{person}{Evangelos
+  Sariyanidi}, {and} \bibinfo{person}{Hatice Gunes}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{Computational Analysis of Affect, Personality, and
+  Engagement in Human--Robot Interactions}}.
+\newblock In \bibinfo{booktitle}{\emph{Computer Vision for Assistive
+  Healthcare}}. \bibinfo{publisher}{Elsevier}, \bibinfo{pages}{283--318}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Xu, and Liu}{Chen et~al\mbox{.}}{2018}]%
+        {chen2018deep}
+\bibfield{author}{\bibinfo{person}{Jingying Chen}, \bibinfo{person}{Ruyi Xu},
+  {and} \bibinfo{person}{Leyuan Liu}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{Deep peak-neutral difference feature for facial
+  expression recognition}}.
+\newblock \bibinfo{journal}{\emph{Multimedia Tools and Applications}}
+  \bibinfo{volume}{77}, \bibinfo{number}{22} (\bibinfo{year}{2018}),
+  \bibinfo{pages}{29871--29887}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Diligent Robotics}}{{Diligent
+  Robotics}}{2019}]%
+        {moxi}
+\bibfield{author}{\bibinfo{person}{{Diligent Robotics}}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{{Moxi — Diligent Robotics}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.diligentrobots.com/moxi https://diligentrobots.com/moxi}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ekman, Rosenberg, {of Psychology Paul Ekman},
+  Rosenberg, Rosenberg, and Smith}{Ekman et~al\mbox{.}}{1997}]%
+        {ekman1997face}
+\bibfield{author}{\bibinfo{person}{P Ekman}, \bibinfo{person}{P.E.E.L.
+  Rosenberg}, \bibinfo{person}{P~H~D {of Psychology Paul Ekman}},
+  \bibinfo{person}{E~L Rosenberg}, \bibinfo{person}{L.D.P.E.L. Rosenberg},
+  {and} \bibinfo{person}{M~B Smith}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{What the Face Reveals: Basic and Applied
+  Studies of Spontaneous Expression Using the Facial Action Coding System
+  (FACS)}}}.
+\newblock \bibinfo{publisher}{Oxford University Press}.
+\newblock
+\showISBNx{9780195104462}
+\urldef\tempurl%
+\url{https://books.google.co.uk/books?id=fFGYs079-7YC}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Elliq}{Elliq}{2019}]%
+        {ElliQ}
+\bibfield{author}{\bibinfo{person}{Elliq}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{{ElliQ, the sidekick for happier aging – Intuition
+  Robotics}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://elliq.com/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Friesen and Ekman}{Friesen and Ekman}{1978}]%
+        {friesen1978facial}
+\bibfield{author}{\bibinfo{person}{E Friesen} {and} \bibinfo{person}{Paul
+  Ekman}.} \bibinfo{year}{1978}\natexlab{}.
+\newblock \showarticletitle{{Facial action coding system: a technique for the
+  measurement of facial movement}}.
+\newblock \bibinfo{journal}{\emph{Palo Alto}} \bibinfo{volume}{3},
+  \bibinfo{number}{2} (\bibinfo{year}{1978}), \bibinfo{pages}{5}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Goodfellow, Erhan, Carrier, Courville, Mirza,
+  Hamner, Cukierski, Tang, Thaler, Lee, and Others}{Goodfellow
+  et~al\mbox{.}}{2013}]%
+        {goodfellow2013challenges}
+\bibfield{author}{\bibinfo{person}{Ian~J Goodfellow}, \bibinfo{person}{Dumitru
+  Erhan}, \bibinfo{person}{Pierre~Luc Carrier}, \bibinfo{person}{Aaron
+  Courville}, \bibinfo{person}{Mehdi Mirza}, \bibinfo{person}{Ben Hamner},
+  \bibinfo{person}{Will Cukierski}, \bibinfo{person}{Yichuan Tang},
+  \bibinfo{person}{David Thaler}, \bibinfo{person}{Dong-Hyun Lee}, {and}
+  \bibinfo{person}{Others}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{Challenges in representation learning: A report on
+  three machine learning contests}}. In \bibinfo{booktitle}{\emph{International
+  conference on neural information processing}}. Springer,
+  \bibinfo{pages}{117--124}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Graves, Fern{\'{a}}ndez, Liwicki, Bunke, and
+  Schmidhuber}{Graves et~al\mbox{.}}{2008}]%
+        {graves2008unconstrained}
+\bibfield{author}{\bibinfo{person}{Alex Graves}, \bibinfo{person}{Santiago
+  Fern{\'{a}}ndez}, \bibinfo{person}{Marcus Liwicki}, \bibinfo{person}{Horst
+  Bunke}, {and} \bibinfo{person}{J{\"{u}}rgen Schmidhuber}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{{Unconstrained online handwriting recognition with
+  recurrent neural networks}}. In \bibinfo{booktitle}{\emph{Advances in Neural
+  Information Processing Systems 20, NIPS 2008}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Graves and Schmidhuber}{Graves and
+  Schmidhuber}{2005}]%
+        {graves2005framewise}
+\bibfield{author}{\bibinfo{person}{Alex Graves} {and}
+  \bibinfo{person}{J{\"{u}}rgen Schmidhuber}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{{Framewise phoneme classification with
+  bidirectional LSTM and other neural network architectures}}. In
+  \bibinfo{booktitle}{\emph{Neural Networks}}, Vol.~\bibinfo{volume}{18}.
+  \bibinfo{publisher}{Pergamon}, \bibinfo{pages}{602--610}.
+\newblock
+\showISSN{08936080}
+\urldef\tempurl%
+\url{https://doi.org/10.1016/j.neunet.2005.06.042}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{He, Zhang, Ren, and Sun}{He
+  et~al\mbox{.}}{2016}]%
+        {he2016deep}
+\bibfield{author}{\bibinfo{person}{Kaiming He}, \bibinfo{person}{Xiangyu
+  Zhang}, \bibinfo{person}{Shaoqing Ren}, {and} \bibinfo{person}{Jian Sun}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Deep residual learning for image recognition}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the IEEE Computer Society Conference
+  on Computer Vision and Pattern Recognition}},
+  Vol.~\bibinfo{volume}{2016-Decem}. \bibinfo{publisher}{IEEE Computer
+  Society}, \bibinfo{pages}{770--778}.
+\newblock
+\showISBNx{9781467388504}
+\showISSN{10636919}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/CVPR.2016.90}
+\showDOI{\tempurl}
+\showeprint[arxiv]{1512.03385}
+
+
+\bibitem[\protect\citeauthoryear{Hochreiter and Schmidhuber}{Hochreiter and
+  Schmidhuber}{1997}]%
+        {hochreiter1997long}
+\bibfield{author}{\bibinfo{person}{Sepp Hochreiter} {and}
+  \bibinfo{person}{J{\"{u}}rgen Schmidhuber}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \showarticletitle{{Long short-term memory}}.
+\newblock \bibinfo{journal}{\emph{Neural computation}} \bibinfo{volume}{9},
+  \bibinfo{number}{8} (\bibinfo{year}{1997}), \bibinfo{pages}{1735--1780}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kahou, Bouthillier, Lamblin, Gulcehre,
+  Michalski, Konda, Jean, Froumenty, Dauphin, Boulanger-Lewandowski, and
+  Others}{Kahou et~al\mbox{.}}{2016}]%
+        {kahou2016emonets}
+\bibfield{author}{\bibinfo{person}{Samira~Ebrahimi Kahou},
+  \bibinfo{person}{Xavier Bouthillier}, \bibinfo{person}{Pascal Lamblin},
+  \bibinfo{person}{Caglar Gulcehre}, \bibinfo{person}{Vincent Michalski},
+  \bibinfo{person}{Kishore Konda}, \bibinfo{person}{S{\'{e}}bastien Jean},
+  \bibinfo{person}{Pierre Froumenty}, \bibinfo{person}{Yann Dauphin},
+  \bibinfo{person}{Nicolas Boulanger-Lewandowski}, {and}
+  \bibinfo{person}{Others}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Emonets: Multimodal deep learning approaches for
+  emotion recognition in video}}.
+\newblock \bibinfo{journal}{\emph{Journal on Multimodal User Interfaces}}
+  \bibinfo{volume}{10}, \bibinfo{number}{2} (\bibinfo{year}{2016}),
+  \bibinfo{pages}{99--111}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kahou, Pal, Bouthillier, Froumenty,
+  G{\"{u}}l{\c{c}}ehre, Memisevic, Vincent, Courville, Bengio, Ferrari, and
+  Others}{Kahou et~al\mbox{.}}{2013}]%
+        {kahou2013combining}
+\bibfield{author}{\bibinfo{person}{Samira~Ebrahimi Kahou},
+  \bibinfo{person}{Christopher Pal}, \bibinfo{person}{Xavier Bouthillier},
+  \bibinfo{person}{Pierre Froumenty}, \bibinfo{person}{{\c{C}}aglar
+  G{\"{u}}l{\c{c}}ehre}, \bibinfo{person}{Roland Memisevic},
+  \bibinfo{person}{Pascal Vincent}, \bibinfo{person}{Aaron Courville},
+  \bibinfo{person}{Yoshua Bengio}, \bibinfo{person}{Raul~Chandias Ferrari},
+  {and} \bibinfo{person}{Others}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{Combining modality specific deep neural networks
+  for emotion recognition in video}}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 15th ACM on International conference on multimodal interaction}}.
+  \bibinfo{pages}{543--550}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kim, Baddar, Jang, and Ro}{Kim
+  et~al\mbox{.}}{2017a}]%
+        {kim2017multiobjective}
+\bibfield{author}{\bibinfo{person}{Dae~Hoe Kim}, \bibinfo{person}{Wissam~J
+  Baddar}, \bibinfo{person}{Jinhyeok Jang}, {and} \bibinfo{person}{Yong~Man
+  Ro}.} \bibinfo{year}{2017}\natexlab{a}.
+\newblock \showarticletitle{{Multi-objective based spatio-temporal feature
+  representation learning robust to expression intensity variations for facial
+  expression recognition}}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Affective Computing}}
+  \bibinfo{volume}{10}, \bibinfo{number}{2} (\bibinfo{year}{2017}),
+  \bibinfo{pages}{223--236}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kim, Lee, Choi, and Song}{Kim
+  et~al\mbox{.}}{2017b}]%
+        {kim2017multi}
+\bibfield{author}{\bibinfo{person}{Dae~Ha Kim}, \bibinfo{person}{Min~Kyu Lee},
+  \bibinfo{person}{Dong~Yoon Choi}, {and} \bibinfo{person}{Byung~Cheol Song}.}
+  \bibinfo{year}{2017}\natexlab{b}.
+\newblock \showarticletitle{{Multi-modal emotion recognition using
+  semi-supervised learning and multiple neural networks in the wild}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 19th ACM International
+  Conference on Multimodal Interaction}}. \bibinfo{pages}{529--535}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kingma and Ba}{Kingma and Ba}{2014}]%
+        {kingma2014adam}
+\bibfield{author}{\bibinfo{person}{Diederik~P Kingma} {and}
+  \bibinfo{person}{Jimmy Ba}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{Adam: A method for stochastic optimization}}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1412.6980}}
+  (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Lawrence, Giles, Tsoi, and Back}{Lawrence
+  et~al\mbox{.}}{1997}]%
+        {lawrence1997face}
+\bibfield{author}{\bibinfo{person}{Steve Lawrence}, \bibinfo{person}{C~Lee
+  Giles}, \bibinfo{person}{Ah~Chung Tsoi}, {and} \bibinfo{person}{Andrew~D
+  Back}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \showarticletitle{{Face recognition: A convolutional neural-network
+  approach}}.
+\newblock \bibinfo{journal}{\emph{IEEE transactions on neural networks}}
+  \bibinfo{volume}{8}, \bibinfo{number}{1} (\bibinfo{year}{1997}),
+  \bibinfo{pages}{98--113}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Zhang, and Pan}{Liu
+  et~al\mbox{.}}{2016}]%
+        {liu2016facial}
+\bibfield{author}{\bibinfo{person}{Kuang Liu}, \bibinfo{person}{Mingmin Zhang},
+  {and} \bibinfo{person}{Zhigeng Pan}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Facial expression recognition with CNN ensemble}}.
+  In \bibinfo{booktitle}{\emph{2016 international conference on cyberworlds
+  (CW)}}. IEEE, \bibinfo{pages}{163--166}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Wang, Li, Shan, Huang, and Chen}{Liu
+  et~al\mbox{.}}{2014b}]%
+        {liu2014combining}
+\bibfield{author}{\bibinfo{person}{Mengyi Liu}, \bibinfo{person}{Ruiping Wang},
+  \bibinfo{person}{Shaoxin Li}, \bibinfo{person}{Shiguang Shan},
+  \bibinfo{person}{Zhiwu Huang}, {and} \bibinfo{person}{Xilin Chen}.}
+  \bibinfo{year}{2014}\natexlab{b}.
+\newblock \showarticletitle{{Combining multiple kernel methods on riemannian
+  manifold for emotion recognition in the wild}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 16th International Conference on
+  multimodal interaction}}. \bibinfo{pages}{494--501}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Han, Meng, and Tong}{Liu
+  et~al\mbox{.}}{2014a}]%
+        {liu2014facial}
+\bibfield{author}{\bibinfo{person}{Ping Liu}, \bibinfo{person}{Shizhong Han},
+  \bibinfo{person}{Zibo Meng}, {and} \bibinfo{person}{Yan Tong}.}
+  \bibinfo{year}{2014}\natexlab{a}.
+\newblock \showarticletitle{{Facial expression recognition via a boosted deep
+  belief network}}. In \bibinfo{booktitle}{\emph{Proceedings of the IEEE
+  conference on computer vision and pattern recognition}}.
+  \bibinfo{pages}{1805--1812}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Livingstone and Russo}{Livingstone and
+  Russo}{2018}]%
+        {livingstone2018ryerson}
+\bibfield{author}{\bibinfo{person}{Steven~R Livingstone} {and}
+  \bibinfo{person}{Frank~A Russo}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{The Ryerson Audio-Visual Database of Emotional
+  Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal
+  expressions in North American English}}.
+\newblock \bibinfo{journal}{\emph{PloS one}} \bibinfo{volume}{13},
+  \bibinfo{number}{5} (\bibinfo{year}{2018}), \bibinfo{pages}{e0196391}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{No Isolation}}{{No Isolation}}{2018}]%
+        {AV1}
+\bibfield{author}{\bibinfo{person}{{No Isolation}}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{{AV1 – the robot for children with long-term
+  illness}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.noisolation.com/global/av1/
+  https://www.noisolation.com/global/av1/privacy-and-resources/{\%}0Ahttps://www.noisolation.com/global/av1/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ouyang, Kawaai, Goh, Shen, Ding, Ming, and
+  Huang}{Ouyang et~al\mbox{.}}{2017}]%
+        {ouyang2017audio}
+\bibfield{author}{\bibinfo{person}{Xi Ouyang}, \bibinfo{person}{Shigenori
+  Kawaai}, \bibinfo{person}{Ester Gue~Hua Goh}, \bibinfo{person}{Shengmei
+  Shen}, \bibinfo{person}{Wan Ding}, \bibinfo{person}{Huaiping Ming}, {and}
+  \bibinfo{person}{Dong-Yan Huang}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{{Audio-visual emotion recognition using deep
+  transfer learning and multiple temporal models}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 19th ACM international
+  conference on multimodal interaction}}. \bibinfo{pages}{577--582}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Parkhi, Vedaldi, and Zisserman}{Parkhi
+  et~al\mbox{.}}{2015}]%
+        {parkhi2015deep}
+\bibfield{author}{\bibinfo{person}{Omkar~M Parkhi}, \bibinfo{person}{Andrea
+  Vedaldi}, {and} \bibinfo{person}{Andrew Zisserman}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{Deep face recognition}}.
+\newblock  (\bibinfo{year}{2015}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rumelhart, Hinton, and Williams}{Rumelhart
+  et~al\mbox{.}}{1985}]%
+        {rumelhart1985learning}
+\bibfield{author}{\bibinfo{person}{David~E Rumelhart},
+  \bibinfo{person}{Geoffrey~E Hinton}, {and} \bibinfo{person}{Ronald~J
+  Williams}.} \bibinfo{year}{1985}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{Learning internal representations by error
+  propagation}}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport}.
+  \bibinfo{institution}{California Univ San Diego La Jolla Inst for Cognitive
+  Science}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Russakovsky, Deng, Su, Krause, Satheesh, Ma,
+  Huang, Karpathy, Khosla, Bernstein, Berg, and Fei-Fei}{Russakovsky
+  et~al\mbox{.}}{2015}]%
+        {ILSVRC15}
+\bibfield{author}{\bibinfo{person}{Olga Russakovsky}, \bibinfo{person}{Jia
+  Deng}, \bibinfo{person}{Hao Su}, \bibinfo{person}{Jonathan Krause},
+  \bibinfo{person}{Sanjeev Satheesh}, \bibinfo{person}{Sean Ma},
+  \bibinfo{person}{Zhiheng Huang}, \bibinfo{person}{Andrej Karpathy},
+  \bibinfo{person}{Aditya Khosla}, \bibinfo{person}{Michael Bernstein},
+  \bibinfo{person}{Alexander~C Berg}, {and} \bibinfo{person}{Li Fei-Fei}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{ImageNet Large Scale Visual Recognition
+  Challenge}}.
+\newblock \bibinfo{journal}{\emph{International Journal of Computer Vision
+  (IJCV)}} \bibinfo{volume}{115}, \bibinfo{number}{3} (\bibinfo{year}{2015}),
+  \bibinfo{pages}{211--252}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s11263-015-0816-y}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{{Saiful Islam} and Hossain}{{Saiful Islam} and
+  Hossain}{2020}]%
+        {islam2020foreign}
+\bibfield{author}{\bibinfo{person}{Md. {Saiful Islam}} {and}
+  \bibinfo{person}{Emam Hossain}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{{Foreign Exchange Currency Rate Prediction using a
+  GRU-LSTM Hybrid Network}}.
+\newblock \bibinfo{journal}{\emph{Soft Computing Letters}} (\bibinfo{date}{oct}
+  \bibinfo{year}{2020}), \bibinfo{pages}{100009}.
+\newblock
+\showISSN{26662221}
+\urldef\tempurl%
+\url{https://doi.org/10.1016/j.socl.2020.100009}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Simonyan and Zisserman}{Simonyan and
+  Zisserman}{2015}]%
+        {simonyan2014very}
+\bibfield{author}{\bibinfo{person}{Karen Simonyan} {and}
+  \bibinfo{person}{Andrew Zisserman}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{Very deep convolutional networks for large-scale
+  image recognition}}. In \bibinfo{booktitle}{\emph{3rd International
+  Conference on Learning Representations, ICLR 2015 - Conference Track
+  Proceedings}}. \bibinfo{publisher}{International Conference on Learning
+  Representations, ICLR}.
+\newblock
+\showeprint[arxiv]{1409.1556}
+\urldef\tempurl%
+\url{http://www.robots.ox.ac.uk/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Snoek, Larochelle, and Adams}{Snoek
+  et~al\mbox{.}}{2012}]%
+        {snoek2012practical}
+\bibfield{author}{\bibinfo{person}{Jasper Snoek}, \bibinfo{person}{Hugo
+  Larochelle}, {and} \bibinfo{person}{Ryan~P Adams}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{{Practical bayesian optimization of machine
+  learning algorithms}}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1206.2944}}
+  (\bibinfo{year}{2012}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Szegedy, Liu, Jia, Sermanet, Reed, Anguelov,
+  Erhan, Vanhoucke, Rabinovich, and Others}{Szegedy et~al\mbox{.}}{2014}]%
+        {szegedy2014going}
+\bibfield{author}{\bibinfo{person}{Christian Szegedy}, \bibinfo{person}{Wei
+  Liu}, \bibinfo{person}{Yangqing Jia}, \bibinfo{person}{Pierre Sermanet},
+  \bibinfo{person}{Scott Reed}, \bibinfo{person}{Dragomir Anguelov},
+  \bibinfo{person}{Dumitru Erhan}, \bibinfo{person}{Vincent Vanhoucke},
+  \bibinfo{person}{A Rabinovich}, {and} \bibinfo{person}{Others}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{Going deeper with convolutions. arXiv 2014}}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1409.4842}}
+  \bibinfo{volume}{1409} (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Tian, Kanade, and Cohn}{Tian
+  et~al\mbox{.}}{2001}]%
+        {tian2001recognizing}
+\bibfield{author}{\bibinfo{person}{Y-I Tian}, \bibinfo{person}{Takeo Kanade},
+  {and} \bibinfo{person}{Jeffrey~F Cohn}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{{Recognizing action units for facial expression
+  analysis}}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on pattern analysis and
+  machine intelligence}} \bibinfo{volume}{23}, \bibinfo{number}{2}
+  (\bibinfo{year}{2001}), \bibinfo{pages}{97--115}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Tian}{Tian}{2004}]%
+        {tian2004evaluation}
+\bibfield{author}{\bibinfo{person}{Ying-li Tian}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{{Evaluation of face resolution for expression
+  analysis}}. In \bibinfo{booktitle}{\emph{2004 Conference on Computer Vision
+  and Pattern Recognition Workshop}}. IEEE, \bibinfo{pages}{82}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Tran, Bourdev, Fergus, Torresani, and
+  Paluri}{Tran et~al\mbox{.}}{2015}]%
+        {tran2015learning}
+\bibfield{author}{\bibinfo{person}{Du Tran}, \bibinfo{person}{Lubomir Bourdev},
+  \bibinfo{person}{Rob Fergus}, \bibinfo{person}{Lorenzo Torresani}, {and}
+  \bibinfo{person}{Manohar Paluri}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{Learning spatiotemporal features with 3d
+  convolutional networks}}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  IEEE international conference on computer vision}}.
+  \bibinfo{pages}{4489--4497}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Whitehill and Omlin}{Whitehill and
+  Omlin}{2006}]%
+        {whitehill2006haar}
+\bibfield{author}{\bibinfo{person}{Jacob Whitehill} {and}
+  \bibinfo{person}{Christian~W Omlin}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{{Haar features for FACS AU recognition}}. In
+  \bibinfo{booktitle}{\emph{7th international conference on automatic face and
+  gesture recognition (FGR06)}}. IEEE, \bibinfo{pages}{5----pp}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zhao, Liang, Liu, Li, Han, Vasconcelos, and
+  Yan}{Zhao et~al\mbox{.}}{2016}]%
+        {zhao2016peak}
+\bibfield{author}{\bibinfo{person}{Xiangyun Zhao}, \bibinfo{person}{Xiaodan
+  Liang}, \bibinfo{person}{Luoqi Liu}, \bibinfo{person}{Teng Li},
+  \bibinfo{person}{Yugang Han}, \bibinfo{person}{Nuno Vasconcelos}, {and}
+  \bibinfo{person}{Shuicheng Yan}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{Peak-piloted deep network for facial expression
+  recognition}}. In \bibinfo{booktitle}{\emph{European conference on computer
+  vision}}. Springer, \bibinfo{pages}{425--442}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zheng, Ramirez, and Fuentes}{Zheng
+  et~al\mbox{.}}{2010}]%
+        {zheng2010face}
+\bibfield{author}{\bibinfo{person}{Jun Zheng}, \bibinfo{person}{Geovany~A
+  Ramirez}, {and} \bibinfo{person}{Olac Fuentes}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{{Face detection in low-resolution color images}}.
+  In \bibinfo{booktitle}{\emph{International Conference Image Analysis and
+  Recognition}}. Springer, \bibinfo{pages}{454--463}.
+\newblock
+
+
+\end{thebibliography}
