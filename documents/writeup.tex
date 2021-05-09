@@ -421,7 +421,7 @@ is likely due to the fact that VGG model had been trained to recognize specific 
 features, whereas ImageNet model is trained on a much wider set of objects so is
 less dedicated to recognizing faces.
 
-\begin{table*}[]
+\begin{table*}[htbp]
 \caption{Classification results on the test set of the FER+ dataset.}
 \label{tab:imageres}
 \begin{tabular}{lccccccccccccccc}
@@ -453,7 +453,7 @@ Adversarial Network to generate more artificial faces for the minority
 classes. However, I did not employ these techniques in this work, as my focus
 was on classifying videos.
 
-\begin{figure}
+\begin{figure}[htbp]
 	\includegraphics[width=0.7\linewidth]{images/image-vgg.png}
 	\caption{Confusion matrix ResNet50 pre-trained on VGG Face Dataset.}
   \label{fig:image-vgg}
@@ -558,7 +558,7 @@ was trained on 30 fps video. I am not sure why it performed so poorly at this
 framerate, and would like to investigate further, however for now an easy fix
 would be to downsample the frames, and only accept frames at 15 fps.
 
-\begin{figure*} 
+\begin{figure*}[htbp]
 	\caption{Confusion matrices for video classification on the RAVDESS
 	dataset, based on the best results for any fps/resolution.}
 	\label{fig:video}
@@ -583,7 +583,7 @@ would be to downsample the frames, and only accept frames at 15 fps.
 \end{figure*}
 
 
-\begin{table*}
+\begin{table*}[htbp]
 	\caption{Comparison of video classifiers accuracy on the RAVDESS dataset.}
 	\label{tab:video}
 	\begin{subtable}[b]{0.3\textwidth}
@@ -649,15 +649,52 @@ wherever they might need to be. The image model I trained is already prepared
 for in-the-wild, as the FER+ dataset is based off of images taken from a wide
 range of sources. However, the video LSTM model may not perform well on an
 in-the-wild dataset, as it was trained in lab conditions - this would need to
-be tested. 
+be tested. Additionally, in-the-wild conditions may result in especially low
+resolution images - if a person is far from a camera then there face would be
+especially low resolution. It may be worth investigating whether some
+preprocessing could be done on the client, in order to crop to around the
+individual's face before transmitting over the network.
 
-%%
-%% Future work:
-%% - Multimodal analysis
-%% - More advanced models
-%% - Testing on in the wild datasets
-%% - Robots
-%% - Making more compact
+An additional future possibility would be to look at other advanced neural
+network architectures which have been previously used for classification.
+For example, T. Vo et al.'s pyramid super-resolution architecture
+\cite{vo2020pyramid} which uses super-resolution networks to reliably scale 
+up facial images and then classify on those images. It has shown to be
+effective on in-the-wild image datasets, so would be interesting to test on
+in-the-wild videos, by finding a way to append a LSTM to the architecture. 
+It may also be useful to test other networks instead of the LSTM, for
+example transformers \cite{vaswani2017attention} which make use of attention
+layers, that allow models to be trained in less time, and often achieve
+superior results to LSTMs. 
+
+Another future direction may looks at reducing the size of the models, as
+currently the model is very large, with TODO parameters. By reducing the size
+of the network, it is possible to classify more frames, use less energy
+and save money. In order to reduce the size of the models, there are several
+possible techniques that could be employed, the first of which is training a
+smaller model - I could look at using ResNet18 or another lighter-weight
+network, followed by a LSTM with fewer states, in an attempt to find a good
+balance between accuracy and model size. An alternative approach would be
+pruning - where we find weights or layers that have a low importance to the
+result, and remove them from the network, which can sometimes even result in
+improved accuracy.
+
+Finally, it is important than someone looks into how this technique could
+be implemented in a social robotics scenario. There are several
+possible directions this could be taken, firstly it could be worthwhile to
+produce a model that can determine a confidence bound over it's predictions.
+The confidence bounds may vary based on the available resolutions, and how
+confident it is about the data. This would allow the robot to react cautiously
+if the emotion classification is uncertain. Additionally, it may be worth
+investigating whether a very light-weight network could be run on the robot
+itself. This would allow the robot to perform some offline calculations in
+case the network is unavailable, and the robots could switch between an online
+and offline mode to to avoid
+interruptions caused by network disconnections.
+Finally, some studies could be done to see if human subjects can perceive the
+difference in emotional response between a robot which performs sentiment 
+analysis on the cloud and
+one which has dedicated hardware to perform classification.
 
 \section{Conclusion}
 
