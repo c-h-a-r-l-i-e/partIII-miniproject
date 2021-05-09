@@ -124,7 +124,7 @@ resolution on the
 classification of emotion in video. I build different models to asses each
 models performance when given lower resolution video. The results show that by
 applying a CNN-LSTM model to a 8-class problem, we can achieve 81\% accuracy on high resolution
-video, and maintain a minimum 67\% accuracy across a range of resolutions. To the best of
+video, and maintain 76\% accuracy at the lowest resolution. To the best of
 my knowledge this is the first work that investigates the effect of changing
 both spatial and temporal resolution on video-based sentiment classification.
 
@@ -484,13 +484,84 @@ was on classifying videos.
 
 In the video recognition task, I tested three main ways in which we could use
 the ResNet50 model in order to predict the sentiment in videos. The dataset I
-used was the 8-class RAVDESS emotional video dataset. 
+used was the 8-class RAVDESS emotional video dataset. Here I have plotted the
+confusion matrix for the best results (over each fps and resolution) for 
+each method in Figure \ref{fig:video}. Additionally, in Table \ref{tab:video}
+I have plotted the accuracy of each method for every resolution combination -
+note accuracy is a useful metric here as the RAVDESS dataset is balanced. In
+this section, I will first discuss the performance of the mean and mode
+classifier, discussing their performance with different emotion classes before
+talking about their performance with the varied fps and resolution. I will
+then do the same for the LSTM classifier and finally talk about some
+interesting anomalies in the results.
 
+The mean and mode classification methods both performed poorly, which is
+unsurprising as they both could not use the temporal dynamics, such as people's
+facial movements in order to determine emotion. As can be seen in the
+confusion matrices in Figures
+\ref{fig:video-mean} and \ref{fig:video-mode}, with the exception of
+happiness most of the emotions end up being classified as neutral. This is
+likely as the RAVDESS dataset consists of people in speech, and while
+speaking it is hard to tell what emotion a person is displaying, by just
+looking at a frame. 
+These methods would definitely not perform well in a cloud robotics scenario,
+as the majority of frames are likely to be neutral when a person is
+interacting with the robot, and these methods are unable to differentiate
+between a scenario where the emotion is actually neutral, and scenarios where
+for most of the frames the expression is unclear.
 
+For mean and mode classification methods, there are some minor differences
+across different framerates and resolutions, but they are likely not
+significant. The differences are most likely due to each different framerate
+getting a slightly different distribution of frames, meaning lower framerates
+might miss important frames, but equally, higher framerates may get many more
+neutral frames. 
+
+The LSTM method performed very well, achieving a best accuracy of 81\%,
+compared to mean and mode which both managed a maximum of 33\%. It is clear
+that the LSTM was able to learn the patterns in the changes in temporal
+dynamics that represent different emotions. By looking at the confusion matrix
+in Figure \ref{fig:video-lstm}, it is clear to  see that the classifier
+performs well across all emotions, with a minimum recall of 61\%, for the sad
+class.
+
+Additionally, the LSTM performs well across all resolutions and framerates,
+with most of the results scoring an accuracy of 75\% or higher. Surprisingly,
+the one exception to that is the highest resolution/framerate results, which
+scored only 67\%, as I will discuss later. 
+I was surprised to find that the performance does not degrade significantly as framerate
+decreases, as I had previously assumed that as the LSTM had learnt temporal
+dynamics at 30 fps, changing framerate would change those dynamics.
+The fact that this classifier can
+perform very impressive results with 5 fps and 256x144 p resolution implies it
+would perform very well in a cloud robotics scenario, where the video data may
+come in at reduced resolution due to huge variance in network conditions and
+distance from cloud endpoints.
+
+One interesting artefact in the data is the performance at the highest
+resolution (1280x720 px and 30 fps) - across all three classification methods
+this combination resulted in the lowest accuracy.
+There are a couple of
+reasons that this could be the case, firstly due to the choice of image
+dataset. The FER+ dataset consists of 48x48 px images of faces, which is
+comparatively low resolution. As a result of this, it is possible that
+the CNN architecture is most familiar with lower resolution images of faces.
+This is not necessarily a negative though, as it results in the consequence
+that the model performs very well on low resolution images, which was the aim
+of this study. 
+An easy fix for this problem would be to downsample the images before
+classifying. Alternatively, a dataset with higher resolution could be used to train the
+CNN, however this may have the undesired effect of degrading the network
+performance on low resolution data.
+In the case of the LSTM classifier, it is especially surprising, as the LSTM
+was trained on 30 fps video. I am not sure why it performed so poorly at this
+framerate, and would like to investigate further, however for now an easy fix
+would be to downsample the frames, and only accept frames at 15 fps.
 
 \begin{figure*} 
 	\caption{Confusion matrices for video classification on the RAVDESS
 	dataset, based on the best results for any fps/resolution.}
+	\label{fig:video}
 	\centering
 \begin{subfigure}[b]{0.3\textwidth}
 	\includegraphics[width=\textwidth]{images/video-mean.png}
@@ -507,13 +578,14 @@ used was the 8-class RAVDESS emotional video dataset.
 \begin{subfigure}[b]{0.3\textwidth}
 	\includegraphics[width=\textwidth]{images/video-lstm.png}
 	\caption{LSTM Classification}
-  \label{fig:video-mean}
+  \label{fig:video-lstm}
 \end{subfigure}
 \end{figure*}
 
 
 \begin{table*}
-	\caption{Comparison of video classifiers performance on the RAVDESS dataset.}
+	\caption{Comparison of video classifiers accuracy on the RAVDESS dataset.}
+	\label{tab:video}
 	\begin{subtable}[b]{0.3\textwidth}
 		\caption{Mean Classification}\label{tab:acc-mean}
 		\begin{tabularx}{0.9\textwidth}{l X X X}
@@ -547,11 +619,45 @@ used was the 8-class RAVDESS emotional video dataset.
 \end{table*}
 
 \section{Future Work}
+
+In this section I go over the directions this work could take in the future.
+Firstly, an important next step would take a look at the effect of varying
+resolutions on multimodal models, where
+we don't just consider visual inputs to the network, and instead use cues from
+the audio and even textual modalities. Multimodal models are important as it
+is not always possible to derive a prediction from just one modality. 
+It will be interesting to see how
+resolution affects the variety of modalities, for example seeing if changing
+the sample rate and/or bit depth of the audio has an impact on audio
+classification. There are several interesting approaches that could be taken,
+for example to prepare for ultra-low bandwidth connection, would it be
+possible to build a model that dynamically chooses what data should be sent
+over the network. Perhaps it would send both audio and visual data when
+network connection is good, but only send audio data when the network
+connection fades. Furthermore, it may be possible to do some basic
+classification on the client-side - in choosing which frames to send to the
+server for further analysis. If the client was able to pick frames where
+emotions are more clear then it would be able to send much fewer frames and
+use less bandwidth.
+
+Another direction this work could go in to is looking at in-the-wild datasets,
+where data is collected from real-world scenarios instead of in the lab, as in
+this study. This is an important step as when the robots are entered into the
+real world it is vital that they are not constrained to lab conditions, and
+can classify data in real-world conditions, fostering beneficial interactions
+wherever they might need to be. The image model I trained is already prepared
+for in-the-wild, as the FER+ dataset is based off of images taken from a wide
+range of sources. However, the video LSTM model may not perform well on an
+in-the-wild dataset, as it was trained in lab conditions - this would need to
+be tested. 
+
 %%
 %% Future work:
 %% - Multimodal analysis
+%% - More advanced models
 %% - Testing on in the wild datasets
-%% - 
+%% - Robots
+%% - Making more compact
 
 \section{Conclusion}
 
