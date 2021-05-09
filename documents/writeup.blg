@@ -6,9 +6,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: writeup.bib
-Warning--I didn't find a database entry for "khan2013framework"
-Warning--I didn't find a database entry for "vo2020pyramid"
-Warning--I didn't find a database entry for "DBLP:journals/corr/HeZRS15"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -27,6 +24,7 @@ Warning--empty address in graves2008unconstrained
 Warning--page numbers missing in both pages and numpages fields in graves2008unconstrained
 Warning--can't use both volume and number fields in graves2005framewise
 Warning--empty address in graves2005framewise
+Warning--page numbers missing in both pages and numpages fields in DBLP:journals/corr/HeZRS15
 Warning--empty address in he2016deep
 Warning--empty publisher in kahou2013combining
 Warning--empty address in kahou2013combining
@@ -55,51 +53,53 @@ Warning--empty publisher in tian2004evaluation
 Warning--empty address in tian2004evaluation
 Warning--empty publisher in tran2015learning
 Warning--empty address in tran2015learning
+Warning--no number and no volume in vaswani2017attention
+Warning--page numbers missing in both pages and numpages fields in vaswani2017attention
 Warning--empty publisher in whitehill2006haar
 Warning--empty address in whitehill2006haar
 Warning--empty publisher in zhao2016peak
 Warning--empty address in zhao2016peak
 Warning--empty publisher in zheng2010face
 Warning--empty address in zheng2010face
-You've used 38 entries,
+You've used 42 entries,
             5959 wiz_defined-function locations,
-            1568 strings with 23951 characters,
-and the built_in function-call counts, 48697 in all, are:
-= -- 5741
-> -- 2185
+            1585 strings with 24650 characters,
+and the built_in function-call counts, 54177 in all, are:
+= -- 6544
+> -- 2437
 < -- 0
-+ -- 732
-- -- 740
-* -- 3722
-:= -- 5154
-add.period$ -- 192
-call.type$ -- 38
-change.case$ -- 320
-chr.to.int$ -- 36
-cite$ -- 85
-duplicate$ -- 4120
-empty$ -- 2878
-format.name$ -- 874
-if$ -- 11535
++ -- 816
+- -- 820
+* -- 4158
+:= -- 5706
+add.period$ -- 212
+call.type$ -- 42
+change.case$ -- 357
+chr.to.int$ -- 40
+cite$ -- 92
+duplicate$ -- 4526
+empty$ -- 3168
+format.name$ -- 970
+if$ -- 12929
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 149
-newline$ -- 365
-num.names$ -- 302
-pop$ -- 1656
+missing$ -- 165
+newline$ -- 402
+num.names$ -- 334
+pop$ -- 1807
 preamble$ -- 1
-purify$ -- 655
+purify$ -- 727
 quote$ -- 0
-skip$ -- 1480
+skip$ -- 1608
 stack$ -- 0
-substring$ -- 3349
-swap$ -- 435
+substring$ -- 3724
+swap$ -- 479
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 917
-warning$ -- 47
-while$ -- 273
+type$ -- 981
+warning$ -- 50
+while$ -- 295
 width$ -- 0
-write$ -- 711
+write$ -- 782
 (There were 50 warnings)

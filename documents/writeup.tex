@@ -23,7 +23,7 @@
 %%
 %% The first command in your LaTeX source must be the \documentclass command.
 \documentclass[sigconf]{acmart}
-\usepackage{multirow, tabularx, subcaption}
+\usepackage{multirow, tabularx, subcaption, float}
 %% NOTE that a single column version may be required for 
 %% submission and peer review. This can be done by changing
 %% the \doucmentclass[...]{acmart} in this template to 
@@ -482,6 +482,65 @@ was on classifying videos.
 
 \subsection{Video Recognition}
 
+\begin{figure*}[h]
+	\caption{Confusion matrices for video classification on the RAVDESS
+	dataset, based on the best results for any fps/resolution.}
+	\label{fig:video}
+	\centering
+\begin{subfigure}[b]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{images/video-mean.png}
+	\caption{Mean Classification}
+  \label{fig:video-mean}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{images/video-mode.png}
+	\caption{Mode Classification}
+  \label{fig:video-mode}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{images/video-lstm.png}
+	\caption{LSTM Classification}
+  \label{fig:video-lstm}
+\end{subfigure}
+\end{figure*}
+
+
+\begin{table*}[h]
+	\caption{Comparison of video classifiers accuracy on the RAVDESS dataset.}
+	\label{tab:video}
+	\begin{subtable}[b]{0.3\textwidth}
+		\caption{Mean Classification}\label{tab:acc-mean}
+		\begin{tabularx}{0.9\textwidth}{l X X X}
+		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
+		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
+		1280x720 &0.26 &0.31 &0.30 \\
+		640x360 &\textbf{0.33} &0.30 &0.28 \\
+		256x144 &\textbf{0.33} &0.29 &0.31 \\
+		\end{tabularx}
+	\end{subtable}
+	\begin{subtable}[b]{0.3\textwidth}
+		\caption{Mode Classification}\label{tab:acc-mean}
+		\begin{tabularx}{0.9\textwidth}{l X X X}
+		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
+		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
+		1280x720 &0.27 &0.31 &0.31 \\
+		640x360 &0.32 &0.30 &0.30 \\
+		256x144 &\textbf{0.33} &0.31 &0.32 \\
+		\end{tabularx}
+	\end{subtable}
+	\begin{subtable}[b]{0.3\textwidth}
+		\caption{LSTM Classification}\label{tab:acc-lstm}
+		\begin{tabularx}{0.9\textwidth}{l X X X}
+		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
+		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
+		1280x720 &0.67 &\textbf{0.81} &0.77 \\\
+		640x360 &0.77 &0.77 &0.75 \\
+		256x144 &0.80 &\textbf{0.81} &0.76 \\
+		\end{tabularx}
+	\end{subtable}
+\end{table*}
 In the video recognition task, I tested three main ways in which we could use
 the ResNet50 model in order to predict the sentiment in videos. The dataset I
 used was the 8-class RAVDESS emotional video dataset. Here I have plotted the
@@ -558,65 +617,6 @@ was trained on 30 fps video. I am not sure why it performed so poorly at this
 framerate, and would like to investigate further, however for now an easy fix
 would be to downsample the frames, and only accept frames at 15 fps.
 
-\begin{figure*}[htbp]
-	\caption{Confusion matrices for video classification on the RAVDESS
-	dataset, based on the best results for any fps/resolution.}
-	\label{fig:video}
-	\centering
-\begin{subfigure}[b]{0.3\textwidth}
-	\includegraphics[width=\textwidth]{images/video-mean.png}
-	\caption{Mean Classification}
-  \label{fig:video-mean}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.3\textwidth}
-	\includegraphics[width=\textwidth]{images/video-mode.png}
-	\caption{Mode Classification}
-  \label{fig:video-mode}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.3\textwidth}
-	\includegraphics[width=\textwidth]{images/video-lstm.png}
-	\caption{LSTM Classification}
-  \label{fig:video-lstm}
-\end{subfigure}
-\end{figure*}
-
-
-\begin{table*}[htbp]
-	\caption{Comparison of video classifiers accuracy on the RAVDESS dataset.}
-	\label{tab:video}
-	\begin{subtable}[b]{0.3\textwidth}
-		\caption{Mean Classification}\label{tab:acc-mean}
-		\begin{tabularx}{0.9\textwidth}{l X X X}
-		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
-		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
-		1280x720 &0.26 &0.31 &0.30 \\
-		640x360 &\textbf{0.33} &0.30 &0.28 \\
-		256x144 &\textbf{0.33} &0.29 &0.31 \\
-		\end{tabularx}
-	\end{subtable}
-	\begin{subtable}[b]{0.3\textwidth}
-		\caption{Mode Classification}\label{tab:acc-mean}
-		\begin{tabularx}{0.9\textwidth}{l X X X}
-		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
-		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
-		1280x720 &0.27 &0.31 &0.31 \\
-		640x360 &0.32 &0.30 &0.30 \\
-		256x144 &\textbf{0.33} &0.31 &0.32 \\
-		\end{tabularx}
-	\end{subtable}
-	\begin{subtable}[b]{0.3\textwidth}
-		\caption{LSTM Classification}\label{tab:acc-lstm}
-		\begin{tabularx}{0.9\textwidth}{l X X X}
-		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
-		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
-		1280x720 &0.67 &\textbf{0.81} &0.77 \\\
-		640x360 &0.77 &0.77 &0.75 \\
-		256x144 &0.80 &\textbf{0.81} &0.76 \\
-		\end{tabularx}
-	\end{subtable}
-\end{table*}
 
 \section{Future Work}
 
@@ -668,7 +668,8 @@ layers, that allow models to be trained in less time, and often achieve
 superior results to LSTMs. 
 
 Another future direction may looks at reducing the size of the models, as
-currently the model is very large, with TODO parameters. By reducing the size
+currently the CNN-LSTM model is very large, with 24,693,320 parameters. 
+By reducing the size
 of the network, it is possible to classify more frames, use less energy
 and save money. In order to reduce the size of the models, there are several
 possible techniques that could be employed, the first of which is training a
@@ -697,6 +698,14 @@ analysis on the cloud and
 one which has dedicated hardware to perform classification.
 
 \section{Conclusion}
+
+This work applied different techniques to classify sentiment in video at
+various spacial and temporal resolutions, to test the techniques adaptability for use
+in a cloud processing scenario. The findings show that with a CNN-LSTM model
+very good performance can be achieved, up to 81\% classification accuracy with
+8-class classification on the RAVDESS dataset. Additionally, results show that
+this technique can still produce 76\% accuracy on very low spatial and visual resolution
+video, suggesting that it could be utilized in a cloud processing framework.
 
 
 %%
