@@ -278,7 +278,7 @@ An alternative approach focused on attempts to classify the level of
 emotional intensity present in an individual frame - the idea being that you
 could derive the emotion of a video by finding the frames with the strongest
 emotions and just classifying those. 
-In \cite{zhao2016peak} X. Zhao et al. propose a network which minimizes the differences
+X. Zhao et al. proposed a network \cite{zhao2016peak} which minimizes the differences
 between an emotion at low intensity and the same emotion at high intensity, as
 a way to get better classification of low intensity emotion. The downside of
 their technique was that it required a training set consisting of pairs of the
@@ -411,7 +411,7 @@ I freeze the ResNet layers, so we just learn the temporal dynamics using the
 lSTM. We train the network using stochastic gradient descent.
 
 To preprocess the video, I created copies of the video at 3 different
-resolution and 3 different frame rates, for a total of 9 different clips for
+resolutions and 3 different frame rates, for a total of 9 different clips for
 each input. The resolutions and frame rates were chosen such that they give a
 wide range of what may be possible over the internet. For resolutions, we had
 720p (1280x720 px), 360p (480x360 px) and 144p (256x144 px), and for
@@ -462,7 +462,7 @@ disgust expressions within. Furthermore, the line between disgust and anger is
 quite small, meaning that 47\% of the disgust images are labelled as
 anger,
 as can be seen in the confusion matrix in Figure \ref{fig:image-vgg}. There
-are a couple of ways to address this in future, for example I could utilize a
+are a couple of ways to address this in the future, for example I could utilize a
 weighted loss function which gives more weight to the minority
 classes. Also I could use under-sampling of majority classes and over-sampling
 for minority classes. Finally, I could use a Generative
@@ -560,13 +560,13 @@ was on classifying videos.
 In the video recognition task, I tested three main ways in which we could use
 the ResNet50 model in order to predict the sentiment in videos. The dataset I
 used was the 8-class RAVDESS emotional video dataset. Here I have plotted the
-confusion matrix for the best results (over each fps and resolution) for 
+confusion matrix for the best results (over each frame rate and resolution) for 
 each method in Figure \ref{fig:video}. Additionally, in Table \ref{tab:video}
 I have plotted the accuracy of each method for every resolution combination -
 note accuracy is a useful metric here as the RAVDESS dataset is balanced. In
 this section, I will first discuss the mean and mode
 classifier, going over their performance with different emotion classes before
-talking about their performance with the varied frame rate and resolutions. I will
+talking about their performance with the varied frame rates and resolutions. I will
 then do the same for the LSTM classifier and finally talk about some
 interesting anomalies in the results. Note that in the following discussions,
 the mean and mode classifiers are working on a 7-class subset of RAVDESS, as
@@ -611,7 +611,7 @@ I was surprised to find that the performance does not degrade significantly as f
 decreases, as I had previously assumed that as the LSTM had learnt temporal
 dynamics at 30 fps, changing frame rate would change those dynamics.
 The fact that this classifier can
-perform very impressive results with 5 fps and 256x144 p resolution implies it
+produce very impressive results with 5 fps and 256x144 p resolution implies it
 would perform very well in a cloud robotics scenario, where the video data may
 come in at reduced resolution due to huge variance in network conditions and
 distance from cloud endpoints.
@@ -690,7 +690,7 @@ superior results to LSTMs.
 Another future direction may look at reducing the size of the models, as
 currently the CNN-LSTM model is very large, with 24,693,320 parameters. 
 By reducing the size
-of the network, it is possible to classify more frames, use less energy
+of the network, it is possible to classify at greater speed, use less energy
 and save money. In order to reduce the size of the models, there are several
 possible techniques that could be employed, the first of which is training a
 smaller model - I could look at using ResNet18 or another lighter-weight
