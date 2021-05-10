@@ -1,3 +1,7 @@
+"""
+This program will train a video classifier using a LSTM
+"""
+
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.layers import Dropout, Flatten, Dense, Input, AveragePooling2D, TimeDistributed, LSTM
@@ -142,63 +146,3 @@ def train():
     return model
 
 model = train()
-
-
-"""
-vs = VideoSequence(train_x, train_y, 32, 32, 32, 95361)
-print("len : {}".format(vs.__len__()))
-print("getitem : {}".format(vs.__getitem__(0)))
-
-
-def train_gen(batch_size, num_frames):
-    vid_num = 1
-    vid_index = 0
-    frames = get_frame_array(train_x[vid_num])
-    y = train_y[vid_num]
-
-    while True:
-        frames_out = []
-        classes_out = []
-
-        for batch_num in range(batch_size):
-            if vid_index + num_frames > len(frames):
-                vid_num += 1
-                vid_index = 0
-                frames = get_frame_array(train_x[vid_num])
-                y = train_y[vid_num]
-
-            frames_out.append(frames[vid_index: vid_index + num_frames])
-            classes_out.append(y)
-            vid_index += num_frames
-
-        print("frames out : {}, classes_out : {}".format(len(frames_out), len(classes_out)))
-        print("shape frames_out : {}".format(np.array(frames_out).shape))
-        yield frames_out, classes_out
-
-
-def val_gen(batch_size, num_frames):
-    vid_num = 0
-    vid_index = 40
-    frames = get_frame_array(val_x[vid_num])
-    y = val_y[vid_num]
-
-    while True:
-        frames_out = []
-        classes_out = []
-
-        for batch_num in range(batch_size):
-            if vid_index + num_frames > len(frames):
-                vid_num += 1
-                vid_index = 30
-                frames = get_frame_array(val_x[vid_num])
-                y = val_y[vid_num]
-
-
-            frames_out.append(frames[vid_index: vid_index + num_frames])
-            classes_out.append(y)
-            vid_index += 100
-
-
-        yield(np.array(frames_out), np.array(classes_out))
-
-"""

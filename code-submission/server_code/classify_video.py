@@ -1,3 +1,11 @@
+"""
+This program will classify the RAVDESS dataset, using one of several modes -
+lstm / mean / mode. It takes a command line argument to represent the resolution of
+video that should be used, and automatically classifies at 5, 15, and 30 fps, saving the
+results as a binary file.
+"""
+
+
 from tensorflow.keras.models import load_model
 from collections import deque
 import numpy as np
@@ -28,13 +36,16 @@ if gpus:
         print(e)
 
 
-# One of RN50, fer-RN50, RN50-imagenet, RN50-vgg, or vgg-RN50-lstm
+# One of RN50, fer-RN50, RN50-imagenet, RN50-vgg, or whole-vgg-lstm
 MODEL = "whole-vgg-RN50-lstm"
 
 # One of ravdess, ravdess-faces
 DATASET = "ravdess-faces"
 
 CLASSIFY = 'mode'
+
+if CLASSIFY == "lstm":
+    MODEL = "whole-vgg-RN50-lstm"
 
 res = int(sys.argv[1])
 
@@ -76,7 +87,6 @@ for fps in [30, 15, 5]:
         model = load_model("../models/best-models/whole-vgg-resnet50-lstm.h5")
         with open('ravdess_label_bin', 'rb') as file:
             lb = pickle.load(file)
-
 
 
     def mean_classify(preds_list):
@@ -250,25 +260,3 @@ for fps in [30, 15, 5]:
     print(classification_report(actual,
             predictions, labels = range(8), target_names=lb.classes_))
 
-
-"""
-from sklearn.metrics import confusion_matrix
-import itertools
-import matplotlib.pyplot as plt
-
-matrix = confusion_matrix(actual, predictions, normalize='true')
-
-plt.imshow(matrix, interpolation="nearest")
-
-target_names = lb.classes_
-tick_marks = np.arange(len(target_names))
-plt.xticks(tick_marks, target_names, rotation=45)
-plt.yticks(tick_marks, target_names)
-
-
-thresh = matrix.max() / 1.5
-for i, j in itertools.product(range(matrix.shape[0]), range(matrix.shape[1])):
-    plt.text(j, i, "{:0.2f}".format(matrix[i, j]),
-             horizontalalignment="center",
-             color="white" if matrix[i, j] < thresh else "black")
-"""

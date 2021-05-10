@@ -1,3 +1,8 @@
+"""
+This program will train an image classifier, based on the model selected. It will use Bayesian optimization
+to find the ideal parameters
+"""
+
 import matplotlib
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.layers import AveragePooling2D
@@ -81,37 +86,28 @@ def get_model():
 
 
 def full_train():
+    config_defaults = {
+        'batch_size' : 64,
+        'learning_rate' : 0.0008475,
+        'epochs': 30,
+        'momentum' : 0.9,
+        'decay': 1e-4
+    }
 
-    wandb.init(project='sentiment', entity='charlieisalright')
-
-    batch_size = 64
-
-    # First train the top layers
-    opt = Adam(epsilon = 1e-08, decay = 0.0)
-    model = get_model()
-    model.compile(loss="categorical_crossentropy", optimizer=opt,
-        metrics=["accuracy"])
-
+    wandb.init(project='sentiment', config=config_defaults)
+    config = wandb.config
 
     train_generator = train_augmentation.flow(
         trainX,
         trainY,
-        batch_size  = batch_size)
+        batch_size  = config.batch_size)
 
-
-    model.fit_generator(train_generator, steps_per_epoch = len(trainX) // batch_size, 
+    model.fit_generator(train_generator, steps_per_epoch = len(trainX) // config.batch_size, 
             epochs = 5, validation_data = (valX, valY), callbacks = [WandbCallback()])
 
-
     # Next we fine-tune all of the model
-
     for layer in model.layers:
         layer.trainable = True
-
-    opt = SGD(lr = 1e-4, momentum=0.9, decay = 0.0, nesterov=True)
-    model.compile(loss="categorical_crossentropy", optimizer=opt,
-        metrics=["accuracy"])
-
 
     def scheduler(epoch):
         updated_lr = K.get_value(model.optimizer.lr) * 0.5
@@ -134,52 +130,20 @@ def full_train():
 	patience 	= 10,
 	mode 		= 'auto')
 
-    model.fit_generator(train_generator, steps_per_epoch = len(trainX) // batch_size, 
-            epochs = 100, validation_data = (valX, valY), 
-            callbacks = [WandbCallback(), reduce_lr, reduce_lr_plateau, early_stop])
-
-    return model
-
-
-def train():
-    # default hyperparameters
-    config_defaults = {
-        'batch_size' : 64,
-        'learning_rate' : 0.0008475,
-        'epochs': 30,
-        'momentum' : 0.9,
-        'decay': 1e-4
-    }
-
-    wandb.init(project='sentiment', entity='charlieisalright', config=config_defaults)
-    config = wandb.config
-
-    config.architecture_name = EXPERIMENT
-    config.dataset = dataset
-
+    
     # Compile the model, using stochastic gradient descent optimization.
     opt = SGD(lr=config.learning_rate, momentum=config.momentum, decay=config.decay / config.epochs)
     model = get_model()
     model.compile(loss="categorical_crossentropy", optimizer=opt,
         metrics=["accuracy"])
 
-    # Now we can start training!
-    H = model.fit(
-        x = trainX,
-        y = trainY,
-        batch_size=config.batch_size,
-        steps_per_epoch = len(trainX) // config.batch_size,
-        validation_data = (valX, valY),
-        validation_steps = len(valX) // config.batch_size,
-        epochs = config.epochs,
-        callbacks = [WandbCallback()]
-    )
 
+    model.fit_generator(train_generator, steps_per_epoch = len(trainX) // config.batch_size, 
+            epochs = config.epochs, validation_data = (valX, valY), 
+            callbacks = [WandbCallback(), reduce_lr, reduce_lr_plateau, early_stop])
     return model
 
-model = full_train()
 
-"""
 sweep_config = {
     "method": "bayes",
     "metric": {
@@ -211,7 +175,5 @@ sweep_config = {
 
 print("Initializing sweep agent")
 
-sweep_id = 'w4teschu' # wandb.sweep(sweep_config, project='sentiment')
+wandb.sweep(sweep_config, project='sentiment')
 wandb.agent(sweep_id, project='sentiment', function=train)
-
-"""
