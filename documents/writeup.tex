@@ -337,8 +337,8 @@ FER+ uses the same collection of images as in FER-2013, but updated the labels
 to be more accurate by crowd-sourcing the labelling and getting 10 taggers to
 label each image. In this work, we use majority voting to decide the ground
 truth of the images, discarding those for which there is no majority. When
-training, I use the train/validation/test split which FER+ was already split
-into.
+training, I use the train/validation/test split which FER+ was already
+separated into.
 
 To learn facial expressions in videos, I used the RAVDESS
 \cite{livingstone2018ryerson} dataset by SR. Livingstone and FA. Russo. The
@@ -408,7 +408,7 @@ I used a LSTM with 1024 units, which
 means the LSTM outputs 1024 different features. I follwed the LSTM with two
 dense layers for the final classifcation.
 I freeze the ResNet layers, so we just learn the temporal dynamics using the
-lSTM, which is trained using stochastic gradient descent.
+lSTM. We train the network using stochastic gradient descent.
 
 To preprocess the video, I created copies of the video at 3 different
 resolution and 3 different frame rates, for a total of 9 different clips for
@@ -424,8 +424,6 @@ a server.
 
 In this section I walk through the results of the experiments, starting with
 the image recognition task and then moving on to the video recognition tasks.
-
-\subsection{Image Recognition}
 
 \begin{table*}[htbp]
 \caption{Classification results on the test set of the FER+ dataset.}
@@ -444,6 +442,9 @@ RN50 on VGG & \textbf{0.86} &\textbf{0.85} &\textbf{0.33} &\textbf{0.45} &\textb
 RN50 on ImageNet   & 0.63 &0.67 &0 &0 &0.21 &0.34 &0.89 &0.88 &0.44 &0.53 &0.81 &0.8 &0.9 &0.82 &0.78 \\
 \end{tabular}
 \end{table*}
+
+\subsection{Image Recognition}
+
 
 In our image recognition task, I trained a ResNet50 network on the 7-class FER+
 dataset, using transfer learning, with two different starting points. One
