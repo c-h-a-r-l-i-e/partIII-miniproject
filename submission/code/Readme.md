@@ -6,3 +6,5 @@ The code is split into two folders:
 - `server_code` : contains the code used to train architectures and perform classification.
 
 There is also a `utils` fodler - a python module I created to collect code needed to create models I needed and load datasets.
+
+Due to large file sizes, I have omitted the data and model folders from this code.
