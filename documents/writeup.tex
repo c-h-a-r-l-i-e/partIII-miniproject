@@ -118,10 +118,10 @@ As social robots become widespread, it will be essential that they can
 classify the emotions of humans around them, in order to interact in a
 meaningful and helpful way. But limited hardware means they
 may have to offload video data to the cloud, reducing the resolution of the
-content. This work focusses on evaluating the fitness of neural network models
+content. This work focuses on evaluating the fitness of neural network models
 for cloud computing, specifically the effect of changing spatial and temporal 
 resolution on the
-classification of emotion in video. I build different models to assess each
+classification of emotion in video. I built different models to assess each
 models performance when given lower resolution video. The results show that by
 applying a CNN-LSTM model to an 8-class classification problem, we can achieve 81\% accuracy on high resolution
 video, and maintain 76\% accuracy even at the lowest resolution. To the best of
@@ -184,13 +184,14 @@ For classifying videos, it is often vital to take temporal data into account,
 and as a result Recurrent Neural Networks (RNNs) \cite{rumelhart1985learning} are a good
 choice. RNNs have some internal state, or memory, which they use to process
 sequences, learning patterns that may vary over time. A very popular
-architecture is Long Short Term Memory \cite{hochreiter1997long} {(LSTM), which make use of gates to
+architecture is Long Short Term Memory \cite{hochreiter1997long} {(LSTM),
+which makes use of gates to
 control the flow into and out of cells in the architecture. LSTMs have found
 wide usage, across speech recognition \cite{graves2005framewise}, market prediction
 \cite{islam2020foreign} and handwriting recognition \cite{graves2008unconstrained}.
 
 In this work we create a number of classifiers which are tested on video at a
-variety of resolutions and frame-rates, in order to deduce which classifiers
+variety of resolutions and frame rates, in order to deduce which classifiers
 may be useful for cloud robotics. The classifiers are tested on the 8-class
 RAVDESS emotional
 video dataset \cite{livingstone2018ryerson}, and our results show that we can
@@ -212,7 +213,7 @@ on other studies that have looked at classifying data at reduced resolutions.
 \subsection{Facial Expression Recognition in Images}
 
 Facial expressions have always been a useful mechanism allowing people to 
-communicate their emotions amongst
+communicate their emotions between
 each other. There has been a large volume of research into the
 mechanisms which allow this non-verbal communication to happen. An early work
 by P. Ekman and W.V. Friesen introduced the Facial Action Coding System
@@ -240,7 +241,7 @@ learning classifier. For example, M.S. Bartlett et al. found that they could
 achieve good results by extracting features using Gabor filters, followed by a
 Support Vector Machine (SVM) \cite{bartlett2005recognizing}. Additionally, J.
 Whitehall and C. Omlin showed that comparable results could be obtained in
-significantly quicker time by instead using Haar wavelets to obtain features
+significantly quicker time by using Haar wavelets to obtain features
 before passing through a SVM \cite{whitehill2006haar}. 
 
 In the previously mentioned techniques, processing of emotions had been split into learning
@@ -263,7 +264,7 @@ When classifying emotion in videos, there is additional information that can
 be extracted by recognising the way the face changes over time. There are
 several papers which attempt to do this, which I will now go over, beginning
 with aggregation techniques. Aggregation techniques classify each frame within
-a video, and then combine the results with some sort of aggregator. In
+a video, and then combine the results with an aggregator. In
 \cite{kahou2016emonets} and \cite{kahou2013combining}, S. Kahou et al. split
 the video into 10 sections, and within each section aggregate the frame
 predictions by taking the mean. They go on to use a SVM to classify using all 10
@@ -273,7 +274,7 @@ M. Liu et al. showed that features from individual frames could be mapped to
 probabilistic distributions such as Gaussian distributions, which could then
 be passed through a SVM.
 
-An alternative approach focussed on attempts to classify the level of
+An alternative approach focused on attempts to classify the level of
 emotional intensity present in an individual frame - the idea being that you
 could derive the emotion of a video by finding the frames with the strongest
 emotions and just classifying those. 
@@ -286,11 +287,11 @@ in \cite{chen2018deep} J. Chen et al. used unsupervised clustering and a semisup
 SVM to detect peak and neutral frames in a large dataset.
 
 Finally, deep spatio-temporal networks were introduced which use sequences of
-frames as inputs to the networks, in the hopes that we can learn more
+frames as inputs to the networks, in the anticipation that we can learn more
 information from the temporal dynamics of the images. C3Ds
 \cite{tran2015learning} are the natural generalization of a CNN to 3
 dimensions - instead of convolving an image with a 2D kernel, we convolve a
-sequence of frames with a 3D kernel. These 3D techniques have been bought to
+sequence of frames with a 3D kernel. These 3D techniques have been brought to
 video emotion recognition, for example by X. Ouyang in \cite{ouyang2017audio}.
 An alternative approach was taken in \cite{kim2017multi} where D. Kim et al.
 tracked facial landmarks to generate trajectories which were used as features.
@@ -300,14 +301,14 @@ as in D. Kim et al.'s work \cite{kim2017multiobjective}.
 
 \subsection{Reduced resolution classification}
 
-There have been a couple of studies looking at how to cope when the face that
+There have been some studies looking at how to cope when the face that
 needs to be classified is at a low resolution. Firstly, Y. Tian
 \cite{tian2004evaluation} looked at how low spatial resolution would affect
 three steps in a facial expression analysis pipeline: face acquisition,
 facial data extraction and finally expression recognition. Also, R. Khan et
 al. produced a framework for expression recognition on low-resolution images
 \cite{khan2013framework}, by suggesting a new set of features which work on
-low resolution images - called pyramid of local binary patterns. Finally, T.
+low resolution images - called a pyramid of local binary patterns. Finally, T.
 Vo et al. proposed the pyramid with super resolution architecture
 \cite{vo2020pyramid}, which made use of super resolution networks in order to
 scale up low resolution images with minimal artefacts. 
@@ -385,18 +386,18 @@ results.
 \subsection{Training Video Recognition}
 
 To classify video, I decided to make use of the best network I previously used
-for classifying images with the logic that the patterns learnt there would be
+for classifying images, with the logic that the patterns learnt there would be
 applicable in the video domain too. In order to extend the network that was
 designed for single images to video, with several image frames, I made use of 3
 different techniques. The first two are quite simplistic - I classify each
-frame of the video before then taking some aggregate of those results. For the
+frame of the video before then taking an aggregate of those results. For the
 first technique, this aggregate is a mean of all the classification scores.
 The second technique is where I take the max class for each frame, and then
 take the mode of these classifications.
 
 The third technique I used was a LSTM network, appended to the output of the
 ResNet, to form a CNN-LSTM architecture. 
-A whole video is fed into the network, and each frames then passes through the
+A whole video is fed into the network, and each frame then passes through the
 ResNet to extract relevant features, which are then passed to the LSTM.
 I used a LSTM with 1024 units, which
 means the LSTM outputs 1024 different features. I follwed the LSTM with two
@@ -411,7 +412,7 @@ resolution and 3 different frame rates, for a total of 9 different clips for
 each input. The resolutions and frame rates were chosen such that they give a
 wide range of what may be possible over the internet. For resolutions, we had
 720p (1280x720 px), 360p (480x360 px) and 144p (256x144 px), and for
-frame rates we had 30 fps, 15 fps and 5 fps. 720 fps at 30 fps is feasible
+frame rates we had 30 fps, 15 fps and 5 fps. 720p at 30 fps is feasible
 with a fast internet connection, and low proximity to the server, and 144p at
 5 fps would happen with a poor internet connection and/or large distance from
 a server. 
@@ -454,7 +455,7 @@ RN50 on ImageNet   & 0.63 &0.67 &0 &0 &0.21 &0.34 &0.89 &0.88 &0.44 &0.53 &0.81 
 One area where both models underperform is in classifying disgust. This is largely
 due to the fact that the FER+ dataset is quite unbalanced, with very few
 disgust expressions within. Furthermore, the line between disgust and anger is
-quite small, meaning that 47\% of the disgust images end up being labelled as
+quite small, meaning that 47\% of the disgust images are labelled as
 anger,
 as can be seen in the confusion matrix in Figure \ref{fig:image-vgg}. There
 are a couple of ways to address this in future, for example I could utilize a
@@ -495,27 +496,26 @@ was on classifying videos.
 \subsection{Video Recognition}
 
 \begin{figure*}[h]
-	\caption{Confusion matrices for video classification on the RAVDESS
-	dataset, based on the best results for any fps/resolution.}
-	\label{fig:video}
 	\centering
-\begin{subfigure}[b]{0.3\textwidth}
-	\includegraphics[width=\textwidth]{images/video-mean.png}
-	\caption{Mean Classification}
-  \label{fig:video-mean}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.3\textwidth}
-	\includegraphics[width=\textwidth]{images/video-mode.png}
-	\caption{Mode Classification}
-  \label{fig:video-mode}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.3\textwidth}
-	\includegraphics[width=\textwidth]{images/video-lstm.png}
-	\caption{LSTM Classification}
-  \label{fig:video-lstm}
-\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{images/video-mean.png}
+		\caption{Mean Classification}
+		  \label{fig:video-mean}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{images/video-mode.png}
+		\caption{Mode Classification}
+		\label{fig:video-mode}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{images/video-lstm.png}
+		\caption{LSTM Classification}
+		\label{fig:video-lstm}
+	\end{subfigure}
+	\caption{Confusion matrices for video classification on the RAVDESS dataset, based on the best results for any fps/resolution.}
+	\label{fig:video}
 \end{figure*}
 
 
@@ -525,7 +525,7 @@ was on classifying videos.
 	\begin{subtable}[b]{0.3\textwidth}
 		\caption{Mean Classification}\label{tab:acc-mean}
 		\begin{tabularx}{0.9\textwidth}{l X X X}
-		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
+		&\multicolumn{3}{c}{Frame rate (fps)} \\\cmidrule{2-4}
 		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
 		1280x720 &0.26 &0.31 &0.30 \\
 		640x360 &\textbf{0.33} &0.30 &0.28 \\
@@ -535,7 +535,7 @@ was on classifying videos.
 	\begin{subtable}[b]{0.3\textwidth}
 		\caption{Mode Classification}\label{tab:acc-mode}
 		\begin{tabularx}{0.9\textwidth}{l X X X}
-		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
+		&\multicolumn{3}{c}{Frame rate (fps)} \\\cmidrule{2-4}
 		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
 		1280x720 &0.27 &0.31 &0.31 \\
 		640x360 &0.32 &0.30 &0.30 \\
@@ -545,7 +545,7 @@ was on classifying videos.
 	\begin{subtable}[b]{0.3\textwidth}
 		\caption{LSTM Classification}\label{tab:acc-lstm}
 		\begin{tabularx}{0.9\textwidth}{l X X X}
-		&\multicolumn{3}{c}{Framerate (fps)} \\\cmidrule{2-4}
+		&\multicolumn{3}{c}{Frame rate (fps)} \\\cmidrule{2-4}
 		Resolution (px) &30 &15 &5 \\\cmidrule{1-4}
 		1280x720 &0.67 &\textbf{0.81} &0.77 \\\
 		640x360 &0.77 &0.77 &0.75 \\
@@ -562,7 +562,7 @@ I have plotted the accuracy of each method for every resolution combination -
 note accuracy is a useful metric here as the RAVDESS dataset is balanced. In
 this section, I will first discuss the mean and mode
 classifier, going over their performance with different emotion classes before
-talking about their performance with the varied framerate and resolutions. I will
+talking about their performance with the varied frame rate and resolutions. I will
 then do the same for the LSTM classifier and finally talk about some
 interesting anomalies in the results. Note that in the following discussions,
 the mean and mode classifiers are working on a 7-class subset of RAVDESS, as
@@ -584,11 +584,11 @@ between a scenario where the emotion is actually neutral, and scenarios where
 for most of the frames the expression is unclear.
 
 For mean and mode classification methods, there are some minor differences
-across different framerates and resolutions (see Table \ref{tab:acc-mean}
+across different frame rates and resolutions (see Table \ref{tab:acc-mean}
 and \ref{tab:acc-mode}) but they are likely not
-significant. The differences are most likely due to each different framerate
-getting a slightly different distribution of frames, meaning lower framerates
-might miss important frames, but equally, higher framerates may get many more
+significant. The differences are most likely due to each different frame rate
+getting a slightly different distribution of frames, meaning lower frame rates
+might miss important frames, but equally, higher frame rates may get many more
 neutral frames. 
 
 The LSTM method performed very well, achieving a best accuracy of 81\%,
@@ -598,14 +598,14 @@ dynamics that represent different emotions. By looking at the confusion matrix
 in Figure \ref{fig:video-lstm}, it is clear to  see that the classifier
 performs well across all emotions, with a minimum recall of 61\%. 
 
-Additionally, the LSTM performs well across all resolutions and framerates,
+Additionally, the LSTM performs well across all resolutions and frame rates,
 with most of the results scoring an accuracy of 75\% or higher. Surprisingly,
-the one exception to that is the result of the highest resolution/framerate
+the one exception to that is the result of the highest resolution/frame rate
 video, which
 scored only 67\%, as I will discuss later. 
-I was surprised to find that the performance does not degrade significantly as framerate
+I was surprised to find that the performance does not degrade significantly as frame rate
 decreases, as I had previously assumed that as the LSTM had learnt temporal
-dynamics at 30 fps, changing framerate would change those dynamics.
+dynamics at 30 fps, changing frame rate would change those dynamics.
 The fact that this classifier can
 perform very impressive results with 5 fps and 256x144 p resolution implies it
 would perform very well in a cloud robotics scenario, where the video data may
@@ -630,7 +630,7 @@ CNN, however this may have the undesired effect of degrading the network
 performance on low resolution data.
 In the case of the LSTM classifier, it is especially surprising, as the LSTM
 was trained on 30 fps video. I am not sure why it performed so poorly at this
-framerate, and would like to investigate further, however for now a fix
+frame rate, and would like to investigate further, however for now, a fix
 would be to downsample the frames, and only accept frames at 15 fps.
 
 
@@ -651,7 +651,7 @@ possible to build a model that dynamically chooses what data should be sent
 over the network. Perhaps it would send both audio and visual data when
 network connection is good, but only send audio data when the network
 connection fades. Furthermore, it may be possible to do some basic
-classification on the client-side - in choosing which frames to send to the
+classification on the client side - in choosing which frames to send to the
 server for further analysis. If the client was able to pick frames where
 emotions are more clear then it would be able to send much fewer frames and
 use less bandwidth.
@@ -662,7 +662,7 @@ this study. This is an important step as when social robots are entered into the
 real world it is vital that they are not constrained to lab conditions, fostering 
 beneficial interactions
 wherever they might need to be. The image model I trained is already prepared
-for in-the-wild, as the FER+ dataset is based off of images taken from a wide
+for in-the-wild, as the FER+ dataset is based on images taken from a wide
 range of sources. However, the video LSTM model may not perform well on an
 in-the-wild dataset, as it was trained on the RAVDESS dataset which is in lab conditions - this would need to
 be tested. Additionally, in-the-wild conditions may result in especially low
@@ -683,7 +683,7 @@ example transformers \cite{vaswani2017attention} which make use of attention
 layers, that allow models to be trained in less time, and often achieve
 superior results to LSTMs. 
 
-Another future direction may looks at reducing the size of the models, as
+Another future direction may look at reducing the size of the models, as
 currently the CNN-LSTM model is very large, with 24,693,320 parameters. 
 By reducing the size
 of the network, it is possible to classify more frames, use less energy
@@ -708,7 +708,7 @@ itself. This would allow the robot to perform some offline calculations in
 case the network is unavailable, and the robots could switch between an online
 and offline mode to to avoid
 interruptions caused by network disconnections.
-Finally, some studies could be done to see if human subjects can perceive the
+Finally, some studies could be undertaken to see if human subjects can perceive the
 difference in emotional response between a robot which performs sentiment 
 analysis on the cloud and
 one which has dedicated hardware to perform classification.
@@ -719,8 +719,7 @@ This work has tested how neural networks for video sentiment detection can
 adapt to changing spatial and temporal resolutions.
 The findings show that with a CNN-LSTM model,
 very good performance can be achieved, with up to 81\% classification accuracy
-on
-8-class classification of the RAVDESS dataset. Additionally, results show that
+on an 8-class emotional video dataset. Additionally, results show that
 this technique can still produce 76\% accuracy on very low spatial and visual resolution
 video, suggesting that it could be used in a cloud processing framework.
 
