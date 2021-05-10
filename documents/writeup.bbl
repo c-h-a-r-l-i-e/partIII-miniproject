@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{42}
+\begin{thebibliography}{41}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -316,16 +316,6 @@
   semi-supervised learning and multiple neural networks in the wild}}. In
   \bibinfo{booktitle}{\emph{Proceedings of the 19th ACM International
   Conference on Multimodal Interaction}}. \bibinfo{pages}{529--535}.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Kingma and Ba}{Kingma and Ba}{2014}]%
-        {kingma2014adam}
-\bibfield{author}{\bibinfo{person}{Diederik~P Kingma} {and}
-  \bibinfo{person}{Jimmy Ba}.} \bibinfo{year}{2014}\natexlab{}.
-\newblock \showarticletitle{{Adam: A method for stochastic optimization}}.
-\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1412.6980}}
-  (\bibinfo{year}{2014}).
 \newblock
 
 

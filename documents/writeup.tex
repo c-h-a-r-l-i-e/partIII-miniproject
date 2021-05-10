@@ -336,14 +336,19 @@ into 7 categories - angry, sad, disgust, fear, happy, surprise and neutral.
 FER+ uses the same collection of images as in FER-2013, but updated the labels
 to be more accurate by crowd-sourcing the labelling and getting 10 taggers to
 label each image. In this work, we use majority voting to decide the ground
-truth of the images, discarding those for which there is no majority. 
+truth of the images, discarding those for which there is no majority. When
+training, I use the train/validation/test split which FER+ was already split
+into.
 
 To learn facial expressions in videos, I used the RAVDESS
 \cite{livingstone2018ryerson} dataset by SR. Livingstone and FA. Russo. The
 dataset consists of 24 professional actors speaking two different statements
 while expressing one of eight emotions. The emotions include calm, happy, sad,
 angry, fearful, surprise, disgust and neutral. The data is provided at 720p,
-30 fps with a blank background, in laboratory settings.
+30 fps with a blank background, in laboratory settings. The dataset does not
+provide 
+a train/validation/test split, so when training I randomly
+assign the videos into a 60\% train / 20\% validate / 20\% test split.
 
 To pre-process the video data, we crop the images to a box around the face. In
 order to detect the bounding box around the face, we make use of Haar
@@ -403,9 +408,7 @@ I used a LSTM with 1024 units, which
 means the LSTM outputs 1024 different features. I follwed the LSTM with two
 dense layers for the final classifcation.
 I freeze the ResNet layers, so we just learn the temporal dynamics using the
-lSTM. It was trained using the Adam
-optimizer \cite{kingma2014adam}, which promises to be well suited for
-optimization problems with a large number of parameters and data. 
+lSTM, which is trained using stochastic gradient descent.
 
 To preprocess the video, I created copies of the video at 3 different
 resolution and 3 different frame rates, for a total of 9 different clips for

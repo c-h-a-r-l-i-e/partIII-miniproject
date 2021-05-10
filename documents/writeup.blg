@@ -30,8 +30,6 @@ Warning--empty publisher in kahou2013combining
 Warning--empty address in kahou2013combining
 Warning--empty publisher in kim2017multi
 Warning--empty address in kim2017multi
-Warning--no number and no volume in kingma2014adam
-Warning--page numbers missing in both pages and numpages fields in kingma2014adam
 Warning--empty publisher in liu2016facial
 Warning--empty address in liu2016facial
 Warning--empty publisher in liu2014combining
@@ -61,45 +59,45 @@ Warning--empty publisher in zhao2016peak
 Warning--empty address in zhao2016peak
 Warning--empty publisher in zheng2010face
 Warning--empty address in zheng2010face
-You've used 42 entries,
+You've used 41 entries,
             5959 wiz_defined-function locations,
-            1585 strings with 24650 characters,
-and the built_in function-call counts, 54177 in all, are:
-= -- 6544
-> -- 2437
+            1581 strings with 24530 characters,
+and the built_in function-call counts, 53096 in all, are:
+= -- 6373
+> -- 2399
 < -- 0
-+ -- 816
-- -- 820
-* -- 4158
-:= -- 5706
-add.period$ -- 212
-call.type$ -- 42
-change.case$ -- 357
-chr.to.int$ -- 40
-cite$ -- 92
-duplicate$ -- 4526
-empty$ -- 3168
-format.name$ -- 970
-if$ -- 12929
++ -- 803
+- -- 804
+* -- 4089
+:= -- 5599
+add.period$ -- 207
+call.type$ -- 41
+change.case$ -- 351
+chr.to.int$ -- 39
+cite$ -- 89
+duplicate$ -- 4441
+empty$ -- 3106
+format.name$ -- 950
+if$ -- 12647
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 165
-newline$ -- 402
-num.names$ -- 334
-pop$ -- 1807
+missing$ -- 161
+newline$ -- 394
+num.names$ -- 326
+pop$ -- 1771
 preamble$ -- 1
-purify$ -- 727
+purify$ -- 712
 quote$ -- 0
-skip$ -- 1608
+skip$ -- 1582
 stack$ -- 0
-substring$ -- 3724
-swap$ -- 479
+substring$ -- 3666
+swap$ -- 474
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 981
-warning$ -- 50
-while$ -- 295
+type$ -- 965
+warning$ -- 48
+while$ -- 287
 width$ -- 0
-write$ -- 782
-(There were 50 warnings)
+write$ -- 766
+(There were 48 warnings)
