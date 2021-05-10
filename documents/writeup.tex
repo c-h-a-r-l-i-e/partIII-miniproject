@@ -424,16 +424,6 @@ the image recognition task and then moving on to the video recognition tasks.
 
 \subsection{Image Recognition}
 
-In our image recognition task, I trained a ResNet50 network on the 7-class FER+
-dataset, using transfer learning, with two different starting points. One
-network was pre-trained on the ImageNet dataset, and one on the VGG Face
-dataset. The recall and F1 score for each class, along with the overall
-accuracy are plotted in Table \ref{tab:imageres}. The table clearly
-demonstrates that the VGG pre-train outperforms ImageNet in each class, which
-is likely due to the fact that VGG model had been trained to recognize specific facial
-features, whereas ImageNet model is trained on a much wider set of objects so is
-less dedicated to recognizing faces.
-
 \begin{table*}[htbp]
 \caption{Classification results on the test set of the FER+ dataset.}
 \label{tab:imageres}
@@ -451,6 +441,16 @@ RN50 on VGG & \textbf{0.86} &\textbf{0.85} &\textbf{0.33} &\textbf{0.45} &\textb
 RN50 on ImageNet   & 0.63 &0.67 &0 &0 &0.21 &0.34 &0.89 &0.88 &0.44 &0.53 &0.81 &0.8 &0.9 &0.82 &0.78 \\
 \end{tabular}
 \end{table*}
+
+In our image recognition task, I trained a ResNet50 network on the 7-class FER+
+dataset, using transfer learning, with two different starting points. One
+network was pre-trained on the ImageNet dataset, and one on the VGG Face
+dataset. The recall and F1 score for each class, along with the overall
+accuracy are plotted in Table \ref{tab:imageres}. The table clearly
+demonstrates that the VGG pre-train outperforms ImageNet in each class, which
+is likely due to the fact that VGG model had been trained to recognize specific facial
+features, whereas ImageNet model is trained on a much wider set of objects so is
+less dedicated to recognizing faces.
 
 One area where both models underperform is in classifying disgust. This is largely
 due to the fact that the FER+ dataset is quite unbalanced, with very few
