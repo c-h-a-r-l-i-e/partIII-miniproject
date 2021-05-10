@@ -5,6 +5,6 @@ The code is split into two folders:
 - `notebooks` : contains code used to collect results, and display them in a readable way. Additionally, this is the code I used to test the architectures, and make sure that they worked - the code within is less up-to-date than in `server_code`. pdfs of notebooks are also included.
 - `server_code` : contains the code used to train architectures and perform classification.
 
-There is also a `utils` fodler - a python module I created to collect code needed to create models I needed and load datasets.
+There is a `utils` folder inside both - a python module I created to collect code needed to create models I needed and load datasets.
 
 Due to large file sizes, I have omitted the data and model folders from this code.
